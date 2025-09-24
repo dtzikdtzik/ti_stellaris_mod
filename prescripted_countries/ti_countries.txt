@@ -1,0 +1,70 @@
+letnev = {
+	ship_prefix = "LBS"
+	species = {
+		class = "HUM"
+		portrait = "humanoid_05"
+		name = "Letnev"
+		plural = "Letnev"
+		adjective = "Letnevan"
+		name_list = "LETNEV"
+		trait = "trait_cave_dweller"
+		trait = "trait_wasteful"
+		trait = "trait_industrious"
+		trait = "trait_natural_engineers"
+	}
+	name = "EMPIRE_DESIGN_letnev"
+	adjective = "Baronial"
+	authority = "auth_imperial"
+	government = "gov_martial_empire"
+	advisor_voice_type = "l_authoritarian"
+	planet_name = "Arc Prime"
+	planet_class = "pc_nuked"
+	system_name = "Arc"
+	initializer = "letnev_home_init"
+	graphical_culture = "nemesis_01"
+	empire_flag = {
+		icon = {
+			category = "ornate"
+			file = "flag_ornate_3.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "diagonal.dds"
+		}
+		colors = {
+			"red"
+			"dark_grey"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender = male
+		name = "Daz Emmiciel Werqan"
+		portrait = "humanoid_05_male_01"
+		texture = 0
+		attachment = 25
+		clothes = 6
+		ruler_title = "Baron"
+		heir_title = "Heir"
+		ruler_title_female = "Baroness"
+		heir_title_female = "Heiress"
+		trait = "trait_ruler_logistic_understanding"
+		leader_class = "official"
+	}
+	
+	flags = { letnev_flag custom_start_screen }
+	
+	spawn_as_fallen = no
+	ignore_portrait_duplication = no
+	room = "letnev_room"
+	spawn_enabled = always
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_militarist"
+	ethic = "ethic_xenophobe"
+	civics = {
+		"civic_grand_armada"
+		"civic_calculating_precision"
+	}
+	origin = "origin_subterranean"
+}

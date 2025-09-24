@@ -1,0 +1,7 @@
+tech_NES = {
+	cost = @tier1cost3
+	area = physics
+	category = { field_manipulation }
+	prerequisites = { "tech_battleships" "tech_shields_3" }
+	
+}

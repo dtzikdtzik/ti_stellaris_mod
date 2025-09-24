@@ -1,0 +1,40 @@
+origin_masters_of_technology = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_evolutionary_predators.dds"
+	picture = GFX_origin_evolutionary_predators
+	flags = { custom_start_screen }
+
+	possible = {
+		species_archetype = { NOT = { value = MACHINE } }
+		civics = {
+			NOR = {
+				value = civic_augmentation_bazaars
+				value = civic_permanent_employment
+				value = civic_idyllic_bloom
+				value = civic_hive_idyllic_bloom
+				value = civic_hive_bodysnatcher
+			}
+			NOR = {
+				text = civic_tooltip_not_natural_design
+				value = civic_natural_design
+				value = civic_hive_natural_design
+			}
+		}
+	}
+
+	description = "origin_tooltip_evolutionary_predators_effects"
+
+	traits = {
+		trait = trait_aquatic
+	}
+
+	modifier = {
+		BIOLOGICAL_species_trait_picks_add = 1
+		ship_hull_add = -100
+		army_health = -50
+	}
+
+	random_weight = {
+		base = 1
+	}
+}

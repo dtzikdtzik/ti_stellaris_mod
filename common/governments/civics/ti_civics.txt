@@ -1,0 +1,568 @@
+#civic_example = {
+#	playable = {}									# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}									# requirements list, see ../readme_requirements.txt
+#	possible = {}									# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no					# default: yes
+#	modification = {								# ( modification = yes/no) | Can be a set of two triggers:
+#		moddable_conditions_custom_tooltip = loc	# Used for localizaton when add or remove is not set but the other one is (replaces CIVIC_NOT_MODDABLE)
+#		add = {}									# add to check if can be added later under certain conditions
+#		remove = {}									# remove to check if can be removed later under certain conditions
+#	}
+#
+#													# default: yes, set to no to prevent adding or removing this after creation of the empire
+#	custom_tooltip_with_modifiers = ...				# Appends localization key to the end of auto-generated modifier effect text.
+#
+#	random_weight = { base = 5 }					# scriptable weight for randomizing a civic
+#													# Note: If omitted, a default weight of 1 is used
+#													# Also note: after game start, AI selection of new civics uses the below weight instead
+#
+#	ai_weight = { base = 5 }						# scriptable weight for AI picking civics in-game (when unlocking a new slot).
+#													# Note: If omitted, a default weight of 1 is used. Not needed when "modification = no"
+#
+#	modifier = {}									# modifier added to the country if the civic is selected and valid
+#	hide_modifiers = yes / no						# default: no; if yes will hide the modifiers from the origin/civic tooltip.
+#	can_build_ruler_ship = yes / no					# default: no
+#	traits = { trait = ... }						# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {						# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#	is_origin = yes / no							# default: no, set to yes if civic should be treated as an Origin
+#	description = LOC_KEY							# Custom text that will appear under the "Effects" heading.
+#	negative_description = LOC_KEY					# Custom text that will appear under the "Penalties" heading.
+#   alternate_civic_version = civic_key				# Key of the civic that will try to replace the current one during a government reform if the current civic is locked (ex: corporate version of the civic that will replace it when attempting to reform to Megacorporation)
+#													# Note: if no replacement civic is indicated, it fallback to non-moddable civics behaviour, i.e. you can't change authority
+#
+#	swap_type = {									# triggered name, desc, custom desc and modifiers
+#		name = ...
+#		description = ...
+#		negative_description = ...
+#		trigger = {
+#			...
+#		}
+#		modifier = {								# modifier that is applied to the country when triggers are evaluated as true
+#			...
+#		}
+#	}
+#	ai_playable = {}								# Similar to "playable", for AI
+#	blocks_random_machine_empire_generation	= yes	# ORIGIN EXCLUSIVE: Makes sure that random empire creation does not create invalid combinations with individualistic machines. Defaults to yes. Required for all origins that should be blocked by individualist machines.
+#}
+
+
+##### BARONY #####
+civic_grand_armada = {
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	modifier = {
+		country_naval_cap_add = 40
+		command_limit_add = 80
+		shipsize_battleship_build_speed_mult = 0.25
+		shipsize_titan_build_speed_mult = 0.25
+	}
+}
+
+civic_munitions_reserves = {
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.1
+		armies_upkeep_mult = -0.2
+		ships_upkeep_mult = -0.2
+		country_trade_produces_mult = -0.1
+		}
+}
+
+
+civic_gunboat_diplomacy = {
+	description = "civic_gunboat_diplomacy_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	modifier = {
+		diplo_weight_naval_mult = 0.25
+		country_power_projection_influence_produces_add = 2
+		country_claim_influence_cost_mult = -0.1		
+	}
+}
+
+#L1
+civic_calculating_precision = {
+	description = "civic_masters_of_trade_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		ship_tracking_add = 20
+		ship_orbital_bombardment_army_damage_mult = 0.5		
+	}
+}
+
+civic_assimilate = {
+	description = "civic_masters_of_trade_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		army_starting_experience_add = 100 #cause they recycle combat experience ig
+		subspecies_integration_mult = 0.25 #does this do what I think?
+		#some kind of reanimation thing
+		#some kind of build speed and build cost thing for conquered planets
+	}
+}
+
+#argent
+civic_zealous_sentinels = {
+	description = "civic_masters_of_trade_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		damage_vs_player_crisis_mult = 0.25
+		damage_vs_country_type_awakened_fallen_empire_mult = 0.25
+		diplo_weight_naval_mult = 0.5
+		resolutions_cost_mult = 1
+	}
+}
+
+# Hacan
+civic_masters_of_trade = {
+	description = "civic_masters_of_trade_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		country_trade_fee = -0.1
+		country_resource_max_trade_add = 60000
+		
+	}
+}
+
+civic_guild_ships = {
+	description = "civic_guild_ships_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		#free commercial pacts??
+	}
+}
+
+civic_technological_singularity = {
+	description = "civic_technological_singularity_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		intel_decryption_add = 2
+		operation_steal_technology_difficulty_add = -4
+		operation_steal_technology_speed_mult = 0.25
+		pop_researcher_workforce_mult = -0.75
+	}
+}
+
+#sardakk
+civic_unrelenting = {
+	modifier = {
+		ship_hull_add = 100
+		army_health = 50
+		army_morale = 50
+	}
+}
+
+#JolNar
+civic_fragile = {
+	modifier = {
+		ship_damage_reduction_add = -1
+	}
+}
+
+#naluu
+foresight = {
+	description = "civic_foresight_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		ship_emergency_ftl_mult = -0.25
+		ship_disengage_opportunities_add = 2
+		intel_decryption_add = 2
+	}
+}
+
+#this one probably needs to go
+hybrid_crystal_fighters = {
+description = "civic_hybrid_crystal_fighters_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		weapon_type_strike_craft_weapon_fire_rate_mult = 0.25
+		weapon_type_strike_craft_weapon_damage_mult = 0.25
+		weapon_type_strike_craft_speed_mult = 0.25
+	}
+}
+
+#naaz
+distant_suns = {
+	description = "civic_distant_suns_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.5
+		ship_anomaly_research_speed_mult = 0.25
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_excavation_speed_mult = 0.5
+	}
+}
+
+fabrication = {
+	description = "civic_fabrication_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		country_specimen_selling_cost_mult = 1
+		ships_minor_artifacts_upkeep_mult = -0.5
+		relics_cost_mult = -0.25
+	}
+}
+
+#saar
+scavenge = {
+	description = "civic_scavenge_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		scavenge_debris_mult = 0.25
+		
+	}
+}
+
+#sol
+versatile = {
+	description = "civic_versatile_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		country_base_influence_produces_add = 1
+		council_agenda_progress_speed = 0.25
+	}
+}
+
+bellum_gloriousm = {
+	description = "bellum_gloriosum"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		armies_upkeep_mult = -0.25
+		army_starting_experience_add = 100
+		army_experience_gain_mult = 2
+		shipsize_transport_armor_add = 300
+		shipsize_transport_base_speed_mult = 0.25
+	}
+}
+
+#Nomad
+the_company = {
+	description = "civic_the_company_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		country_commander_cap_add = 1
+		country_official_cap_add = 1
+		country_scientist_cap_add = 1
+		country_enclave_capacity_add = 1
+		external_leader_pool_add = 3		
+	}
+}
+
+mitosis = {
+	description = "civic_mitosis_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		
+	}
+}
+
+#yssaril
+guild_of_assassins = {
+	description = "civic_guild_of_assassins_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		country_counter_espionage_mult = 1
+		espionage_operation_cost_mult = -0.5
+		intel_decryption_add = 2
+		ship_cloaking_detection_add = 1
+		ship_cloaking_strength_add = 1
+	}
+}
+
+#mentak
+pirate_coalition = {
+	description = "civic_pirate_coalition_effects"
+	potential = {
+		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+		authority = { NOT = { value = auth_corporate }	}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	modifier = {
+		
+	}
+}
+
+# vanilla civic example
+
+#civic_corvee_system = {
+#	description = "civic_corvee_system_effects"
+#	potential = {
+#		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+#		authority = { NOT = { value = auth_corporate } }
+#	}
+#	possible = {
+#		ethics = {
+#			NOR = {
+#				text = civic_tooltip_not_egalitarian
+#				value = ethic_egalitarian
+#				value = ethic_fanatic_egalitarian
+#			}
+#		}
+#		civics = {
+#			NOT = {
+#				value = civic_free_haven
+#			}
+#		}
+#	}
+#	random_weight = { base = @civic_default_random_weight }
+#	ai_weight = {
+#		base = @ai_civic_default_base_weight
+#		modifier = {
+#			factor = @ai_civic_personality_match_factor
+#			OR = {
+#				has_ai_personality = ruthless_capitalists
+#				has_ai_personality = hegemonic_imperialists
+#				has_ai_personality = slaving_despots
+#			}
+#		}
+#		modifier = {
+#			factor = @ai_civic_personality_mismatch_factor
+#			OR = {
+#				has_ai_personality = peaceful_traders
+#				has_ai_personality = democratic_crusaders
+#				has_ai_personality = slaving_despots
+#			}
+#		}
+#	}
+#	modifier = {
+#		planet_resettlement_unemployed_mult = 0.15
+#		planet_jobs_worker_produces_mult = 0.1
+#		pop_resettlement_cost_mult = -0.1
+#	}
+#}

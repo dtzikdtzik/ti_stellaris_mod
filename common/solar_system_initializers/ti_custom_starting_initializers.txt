@@ -1,0 +1,69 @@
+letnev_home_init = {
+	class = "rl_starting_stars"
+	name = "NAME_LETNEV"
+	usage = custom_empire
+
+	flags = { empire_home_system letnev_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		generate_home_system_resources = no
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = { min = 30 max = 35 }
+		has_ring = no
+	}
+	
+		planet = {
+			name = "NAME_arc_prime"
+			class = "pc_nuked"
+			orbit_distance = 25
+			orbit_angle = { min = 30 max = 270 }
+			size = 20
+			has_ring = no
+			change_orbit = 4
+
+			deposit_blockers = none
+			modifiers = none
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+
+			init_effect = {
+				generate_empire_home_planet = yes
+			}
+		}
+
+		planet = {
+			name = "NAME_wren_terra"
+			class = "pc_continental"
+			orbit_distance = 15
+			orbit_angle = { min = 30 max = 270 }
+			size = 10
+			has_ring = no
+			change_orbit = 4
+
+			deposit_blockers = none
+			modifiers = none
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+
+			init_effect = {
+				generate_empire_home_planet = yes
+			}
+		}
+}

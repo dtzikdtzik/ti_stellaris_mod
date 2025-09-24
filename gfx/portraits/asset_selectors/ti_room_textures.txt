@@ -1,0 +1,11 @@
+room_selector = {
+
+
+		default = "default_room"
+
+game_setup = {
+	"default_room" = { always = yes }
+	"letnev_room"	= { always = yes }
+}
+
+}

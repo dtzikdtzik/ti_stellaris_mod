@@ -1,0 +1,38 @@
+triggered_opinion_mecatol_claimed = {
+	trigger = {
+		is_country_type = default
+		Not = { is_in_federation_with = From }
+		FROM = {
+			is_country_type = default
+			has_country_flag = owns_mecatol
+		}
+	}
+
+	opinion = {
+		base = -50
+	}
+}
+
+triggered_opinion_mecatol_claimed_vassal = {
+	trigger = {
+		is_country_type = default
+		FROM = {
+			is_country_type = default
+			OR = {
+				is_overlord_to = root
+				AND = {
+					is_federation_leader = yes
+					federation = {
+						has_federation_type = hegemony_federation
+						has_federation_perk = president_hegemony_cb_1
+					}
+				}
+			}
+			has_country_flag = owns_mecatol
+		}
+	}
+
+	opinion = {
+		base = 20
+	}
+}
