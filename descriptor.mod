@@ -1,12 +1,9 @@
-version="4.1.0"
+version="4.1.1"
 tags={
-	"Balance"
-	"Diplomacy"
-	"Events"
-	"Galaxy Generation"
-	"Buildings"
 	"Species"
 	"Technologies"
+	"Events"
+	"Leaders"
 }
-name="ti_stellaris_mod"
+name="The Barony of Letnev — Twilight Imperium"
 supported_version="v4.1.1"

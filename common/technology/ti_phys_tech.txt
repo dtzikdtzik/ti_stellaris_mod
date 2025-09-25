@@ -1,7 +1,17 @@
 tech_NES = {
 	cost = @tier1cost3
 	area = physics
+	tier = 3
 	category = { field_manipulation }
-	prerequisites = { "tech_battleships" "tech_shields_3" }
+	prerequisites = { "tech_battleships" "tech_shields_5" }
+	weight = @tier3weight1
+	start_tech = no
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_country_flag = letnev_flag
+		}
+	}
 	
 }

@@ -90,6 +90,7 @@ civic_munitions_reserves = {
 		armies_upkeep_mult = -0.2
 		ships_upkeep_mult = -0.2
 		country_trade_produces_mult = -0.1
+		country_resource_max_trade_add = -10000
 		}
 }
 
