@@ -1,4 +1,4 @@
-version="4.1.1"
+version="4.1.3"
 tags={
 	"Species"
 	"Technologies"
@@ -6,4 +6,4 @@ tags={
 	"Leaders"
 }
 name="The Barony of Letnev — Twilight Imperium"
-supported_version="v4.1.1"
+supported_version="v4.1.3"

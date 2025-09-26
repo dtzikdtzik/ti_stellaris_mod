@@ -13,7 +13,7 @@
 
 ###### BARONY #######
 councilor_grand_armada = {
-	leader_class = { commander }
+	leader_class = { commander official }
 	is_leader_possible = {
 		leader_class = commander
 	}
@@ -25,13 +25,17 @@ councilor_grand_armada = {
 }
 
 councilor_munitions_reserves = {
-	leader_class = { commander }
+	leader_class = { commander official }
 	is_leader_possible = {
 		leader_class = commander
 	}
 	civic = civic_munitions_reserves
 	modifier = {
-		country_resource_max_alloys_add = 5000
-		country_resource_max_minerals_add = 10000
+		ships_trade_logistics_mult = -0.05 #this is a problem bc it may be trivial
+		ships_alloys_logistics_mult = -0.05 #and because the logistics system is problematic generally
+		#PREVIOUSLY:
+		#country_resource_max_alloys_add = 5000
+		#country_resource_max_minerals_add = 10000
+		#this was dumb because you would lose all your stored resources if you lost the councilor
 	}
 }
