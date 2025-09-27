@@ -111,19 +111,24 @@ civic_gunboat_diplomacy = {
 				text = civic_tooltip_not_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
+				text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
 			}
 		}
 	}
 	modifier = {
 		diplo_weight_naval_mult = 0.25
 		country_power_projection_influence_produces_add = 2
-		country_claim_influence_cost_mult = -0.1		
+		country_claim_influence_cost_mult = -0.2
+		country_border_friction_mult = 0.5
+		envoy_harm_relations_mult = 1		
 	}
 }
 
 #L1
 civic_calculating_precision = {
-	description = "civic_masters_of_trade_effects"
+	description = "civic_harrow_effects"
 	potential = {
 		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
 		authority = { NOT = { value = auth_corporate }	}
@@ -144,7 +149,7 @@ civic_calculating_precision = {
 }
 
 civic_assimilate = {
-	description = "civic_masters_of_trade_effects"
+	description = "civic_assimilate_effects"
 	potential = {
 		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
 		authority = { NOT = { value = auth_corporate }	}
@@ -152,15 +157,15 @@ civic_assimilate = {
 	possible = {
 		ethics = {
 			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
+				text = civic_tooltip_not_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
 			}
 		}
 	}
 	modifier = {
 		army_starting_experience_add = 100 #cause they recycle combat experience ig
-		subspecies_integration_mult = 0.25 #does this do what I think?
+		subspecies_integration_mult = 0.75 #does this do what I think?
 		#some kind of reanimation thing
 		#some kind of build speed and build cost thing for conquered planets
 	}
@@ -168,7 +173,7 @@ civic_assimilate = {
 
 #argent
 civic_zealous_sentinels = {
-	description = "civic_masters_of_trade_effects"
+	description = "civic_zeal_effects"
 	potential = {
 		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
 		authority = { NOT = { value = auth_corporate }	}
@@ -241,10 +246,10 @@ civic_technological_singularity = {
 	}
 	possible = {
 		ethics = {
-			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
 			}
 		}
 	}
@@ -258,17 +263,42 @@ civic_technological_singularity = {
 
 #sardakk
 civic_unrelenting = {
+	description = "civic_unrelenting_effects"
 	modifier = {
 		ship_hull_add = 100
 		army_health = 50
 		army_morale = 50
 	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+	}
 }
 
-#JolNar
+#JolNar#
+##fragile should be a downside of the unique Jolnar origin##
+##but as a non-removable civic maybe##
 civic_fragile = {
+	pickable_at_start = no
+	description = "civic_fragile_effects"
 	modifier = {
-		ship_damage_reduction_add = -1
+		ship_damage_reduction_add = -1 #this modifier (if working) could be hilarious balance-wise
+		ship_hull_add = -100
+		army_health = -50
+	}
+	possible = {
+		is_origin = { #check if this works
+			Jolnar
+		}
+	}
+	modification = {
+		remove = { no } #do these brackets need to be there?
+		add = { no }
 	}
 }
 
@@ -290,33 +320,33 @@ foresight = {
 	}
 	modifier = {
 		ship_emergency_ftl_mult = -0.25
-		ship_disengage_opportunities_add = 2
+		ship_disengage_opportunities_add = 4
 		intel_decryption_add = 2
 	}
 }
 
-#this one probably needs to go
-hybrid_crystal_fighters = {
-description = "civic_hybrid_crystal_fighters_effects"
-	potential = {
-		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
-		authority = { NOT = { value = auth_corporate }	}
-	}
-	possible = {
-		ethics = {
-			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
-			}
-		}
-	}
-	modifier = {
-		weapon_type_strike_craft_weapon_fire_rate_mult = 0.25
-		weapon_type_strike_craft_weapon_damage_mult = 0.25
-		weapon_type_strike_craft_speed_mult = 0.25
-	}
-}
+#make this a tech
+#hybrid_crystal_fighters = {
+#description = "civic_hybrid_crystal_fighters_effects"
+#	potential = {
+#		ethics = { NOT = {	value = ethic_gestalt_consciousness	}	}
+#		authority = { NOT = { value = auth_corporate }	}
+#	}
+#	possible = {
+#		ethics = {
+#			NOR = {
+#				text = civic_tooltip_not_xenophobe
+#				value = ethic_xenophobe
+#				value = ethic_fanatic_xenophobe
+#			}
+#		}
+#	}
+#	modifier = {
+#		weapon_type_strike_craft_weapon_fire_rate_mult = 0.25
+#		weapon_type_strike_craft_weapon_damage_mult = 0.25
+#		weapon_type_strike_craft_speed_mult = 0.25
+#	}
+#}
 
 #naaz
 distant_suns = {

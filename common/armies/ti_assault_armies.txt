@@ -1,0 +1,43 @@
+###### MECHS ########
+
+### letnev ###
+letnev_mech = {
+	damage = 3.00
+	health = 4.00
+	morale = 3.00
+	morale damage = 3.0
+	collateral_damage = 2.0
+	war_exhaustion = 2.0
+	# can i set a "mech" flag for this? 
+	time = 90 ##### this would be the dunlain reaper unique aspect???
+	icon = GFX_army_type_robot #### change this to a custom MECH icon
+	has_species = no
+	pop_limited = no
+	prerequisites = { "tech_assault_armies" "origin_barony" }
+	resources = {
+		category = armies
+		cost = {
+			alloys = 200 ###should be more expensive bc of Dunlain?
+		}
+		upkeep = {
+			alloys = 1
+		}
+	}
+	potential_country = {
+		has_country_flag = letnev
+	}
+	allow = {
+		custom_tooltip = {
+			text = mech_limit_tooltip
+			owner = { has_country_flag = letnev
+				NOT = {
+					check_variable = {
+						which = "letnev_mech_count" #do I need to make a variable
+						value >= 4 #wait if I get 5 somehow can I produce
+						# unlimited mechs? not good
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+decision_deploy_dunlain_reapers = {
+	owned_planets_only = yes
+	sound = event_administrative_work ##maybe ship build sound instead
+	icon = decision_politics ## change
+
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 300
+			## TODO: make cost and armies scale with planet size
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = origin_barony ## use this or the country flag ?
+			is_regular_empire = yes
+		}
+		NOT = { has_modifier = dunlain_reapers_deployed }
+	}
+
+	effect = {
+		add_modifier = { modifier = "dunlain_reapers_deployed" days = 720 } #what is the days for
+		### how to spawn defense armies
+		# look at martial law (which doesn't exist anymore damn) and commanders
+	}
+}

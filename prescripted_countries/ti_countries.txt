@@ -10,9 +10,16 @@ letnev = {
 		adjective = "Letnevan"
 		name_list = "MACHINE1"
 		trait = "trait_cave_dweller"
-		trait = "trait_wasteful"
-		trait = "trait_industrious"
-		trait = "trait_natural_engineers"
+		## used by Spacht, probably deprecated
+		#trait = "trait_wasteful" #no
+		#trait = "trait_industrious" #maybe
+		#trait = "trait_natural_engineers" #maybe
+		trait = "trait_strong" #except if I do this I can't have the 
+		# second only to tekklar legion flavor text
+		trait = "trait_decadent" #a custom "arrogant" trait would be cool
+		#which could affect elite/leader upkeep
+		#that's really what decadent should do
+		### missing sth else positive, habitability or leader/commander skill
 	}
 	name = "EMPIRE_DESIGN_letnev"
 	adjective = "Baronial"

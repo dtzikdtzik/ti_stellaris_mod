@@ -1,0 +1,26 @@
+munitions_reserves = { ### name?
+	length = @sacrificeDuration ##### uhhhh not ideal 
+	icon = "GFX_edict_type_policy" ### wait they have icons?
+
+	resources = {
+		category = edicts
+		cost = {
+			trade = @Edict3Cost ##### look up edict1cost, etc
+			# but a one-time spend akin to sacrifices would be nicest #
+			### waaaaait this is already the cost seperated from the upkeep!! ##
+			multiplier = value:edict_size_effect ### change this
+		}
+		upkeep = { 
+			trade = @Edict1Cost
+			multiplier = value:edict_size_effect
+			#### try to keep this empty instead ###
+		}
+	}
+
+	modifier = {
+		ship_fire_rate_mult = 0.33 ### look at this again l8r
+	}
+	potential = {
+		has_civic = civic_munitions_reserves
+	}
+}

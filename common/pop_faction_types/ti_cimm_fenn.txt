@@ -1,0 +1,70 @@
+################
+# letnev cimm fenn faction
+################
+
+cimm_fenn = {
+	election_header = "GFX_faction_header_yellow" ##placeholder?
+	guiding_ethic = ethic_militarist #can this be multiple?
+	visual_ethic = "imperialist_visual_ethic" #placeholder? what does it do
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_factions
+		produces = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			unity = @faction_base_output
+			### play with this?
+			### so is this how a trigger works?
+		}
+	}
+
+	## extortion block would go here ##
+
+	is_potential = {
+		is_faction_allowed = yes
+		owner = { has_country_flag = letnev }
+	}
+
+	## what does this even do
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	} 
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
+		can_think = yes
+	}
+
+	attraction = {
+		base = 100
+
+		modifier = {
+			factor = 0.5
+			has_citizenship_rights = no
+		}
+	}
+
+	demand = {
+		title = "active_espionage"
+		unfulfilled_title  ""
+	}
+}

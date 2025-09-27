@@ -1,3 +1,25 @@
+origin_barony = {
+	is_origin = yes
+	icon =
+	picture =
+	flags = { custom_start_screen }
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness	}		}
+		species_archetype = { NOT = { value = MACHINE } }
+	}
+
+	description = "origin_tooltip_barony_effects"
+
+	modifier = {
+
+	}
+
+	random_weight = {
+		base = 0
+	}
+}
+
+
 origin_masters_of_technology = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origin_evolutionary_predators.dds"
@@ -5,6 +27,7 @@ origin_masters_of_technology = {
 	flags = { custom_start_screen }
 
 	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness	}		}
 		species_archetype = { NOT = { value = MACHINE } }
 		civics = {
 			NOR = {
@@ -28,13 +51,13 @@ origin_masters_of_technology = {
 		trait = trait_aquatic
 	}
 
-	modifier = {
-		BIOLOGICAL_species_trait_picks_add = 1
-		ship_hull_add = -100
-		army_health = -50
+	modifier = { #fragile by another name (and porbably better modifiers)
+		#ship_hull_add = -100
+		#army_health = -50
+		
 	}
 
 	random_weight = {
-		base = 1
+		base = 0
 	}
 }
