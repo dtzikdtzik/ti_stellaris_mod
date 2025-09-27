@@ -1,4 +1,5 @@
 portraits = {
+	#letnev portraits
 	letnev = {
 		entity = "letnev01"
 		clothes_selector = "no_texture"
@@ -17,4 +18,37 @@ portraits = {
 #		clothes_selector = "no_texture"
 #		greeting_sound = "mammalian_01_greetings"
 #	}
+}
+
+portrait_groups = {
+	letnev = {
+		default = letnev
+		game_setup = {
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					letnev
+				}
+			}
+		}
+		species = {
+			add = {
+				trigger = {
+					exists = species
+				}
+				portraits = {
+					letnev
+				}
+			}
+
+	}
+	
+}
 }
