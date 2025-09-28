@@ -5,7 +5,7 @@ letnev_mech = {
 	damage = 3.00
 	health = 4.00
 	morale = 3.00
-	morale damage = 3.0
+	morale_damage = 3.0
 	collateral_damage = 2.0
 	war_exhaustion = 2.0
 	# can i set a "mech" flag for this? 
@@ -13,7 +13,7 @@ letnev_mech = {
 	icon = GFX_army_type_robot #### change this to a custom MECH icon
 	has_species = no
 	pop_limited = no
-	prerequisites = { "tech_assault_armies" "origin_barony" }
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		cost = {
@@ -24,7 +24,7 @@ letnev_mech = {
 		}
 	}
 	potential_country = {
-		has_country_flag = letnev
+		has_origin = origin_barony
 	}
 	allow = {
 		custom_tooltip = {

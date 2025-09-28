@@ -13,27 +13,29 @@ dunlain_reaper_defense = {
 		owner = {
 			has_origin = origin_barony
 		}
-
-		spawn_chance = {
-			trigger = {
-				planet = {
-					NOT = { has_modifier = dunlain_reapers_deployed	}
-				 }
-			}
-			factor = 0 ## we don't want random mechs on all the planets
-			## now i just have to find a way to overwrite this while the decision runs
-		}
-
-		spawn_chance = {
-			trigger = {
-				planet = { has_modifier = dunlain_reapers_deployed }
-			}
-			factor = 1 
-				## i dont want this to be all random
-				# but replacing ALL the defense armies with mechs
-				# would triple the power
-				# but if it does nothing that is lame
-				# what to do
-		}
 	}
+
+		
+	spawn_chance = {
+		#trigger = {
+		planet = {
+			NOT = { has_modifier = dunlain_reapers_deployed	}
+		#	 }
+		}
+		factor = 0 ## we don't want random mechs on all the planets
+		## now i just have to find a way to overwrite this while the decision runs
+	}
+
+	spawn_chance = {
+		#trigger = {
+		planet = { has_modifier = dunlain_reapers_deployed }
+		#}
+		factor = 1 
+			## i dont want this to be all random
+			# but replacing ALL the defense armies with mechs
+			# would triple the power
+			# but if it does nothing that is lame
+			# what to do
+	}
+	
 }

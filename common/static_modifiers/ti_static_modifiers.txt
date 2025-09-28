@@ -35,6 +35,11 @@ thin_atmosphere = {
 
 }
 
+# dunlain reaper mech modifier
+dunlain_reapers_deployed = {
+	planet_defense_armies_add = 2
+}
+
 
 ######################
 # imported from Spacht's mod

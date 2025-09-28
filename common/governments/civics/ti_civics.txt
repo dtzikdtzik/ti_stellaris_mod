@@ -108,10 +108,9 @@ civic_gunboat_diplomacy = {
 	possible = {
 		ethics = {
 			NOR = {
-				text = civic_tooltip_not_pacifist
+				text = civic_tooltip_not_pacifist_or_xenophile
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
-				text = civic_tooltip_not_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
 			}
@@ -125,6 +124,19 @@ civic_gunboat_diplomacy = {
 		envoy_harm_relations_mult = 1		
 	}
 }
+
+civic_winnaran_custodians = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_agrarian_idyll.dds" #change
+	potential = {
+		country_type = { value = mecatol }
+	}
+	random_weight = { base = 0 }
+	description = "civic_winnaran_custodians_desc"
+	modifier = {
+		country_base_influence_produces_add = -1
+	}
+}	
 
 #L1
 civic_calculating_precision = {

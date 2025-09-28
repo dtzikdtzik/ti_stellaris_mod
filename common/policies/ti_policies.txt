@@ -29,7 +29,7 @@ diplomatic_stance = {
 				is_country_type = default
 				is_country_type = awakened_fallen_empire
 			}
-			origin_barony = yes #### probably not quite right oops
+			has_origin = origin_barony #### probably not quite right oops
 		}
 	
 		valid = {

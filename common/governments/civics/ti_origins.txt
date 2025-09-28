@@ -1,8 +1,8 @@
 origin_barony = {
 	is_origin = yes
-	icon =
-	picture =
-	flags = { custom_start_screen }
+	icon = "gfx/interface/icons/origins/origin_barony.dds" #placeholder
+	picture = GFX_origin_barony #placeholder
+	flags = { custom_start_screen letnev }
 	possible = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness	}		}
 		species_archetype = { NOT = { value = MACHINE } }

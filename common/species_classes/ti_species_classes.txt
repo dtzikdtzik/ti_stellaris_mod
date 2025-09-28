@@ -10,7 +10,7 @@ LET = {
 		}
 	}
 	trait = "trait_organic"
-	graphical_culture = industrial_01
+	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
-	resources = {}
+	#resources = {}
 }
