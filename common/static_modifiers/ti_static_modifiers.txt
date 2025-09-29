@@ -37,7 +37,8 @@ thin_atmosphere = {
 
 # dunlain reaper mech modifier
 dunlain_reapers_deployed = {
-	planet_defense_armies_add = 2
+	#planet_defense_armies_add = 2
+	army_defense_morale_mult = 0.33
 }
 
 

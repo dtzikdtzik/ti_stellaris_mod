@@ -1,210 +1,210 @@
-trait_brilliant = {
-	cost = 2
-	category = normal
-	species_possible_add = {
-		can_add_genetic_traits = yes
-	}
-	species_possible_remove = {
-		OR = {
-			can_remove_beneficial_genetic_traits = yes
-			can_remove_vocational_genetic_traits = yes
-		}
-	}
-	species_possible_merge_remove = {
-		always = yes
-	}
-	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	localized_tags = {
-		SPECIES_TRAIT_VOCATIONAL
-	}
-	tags = { organic positive pop_output research }
-	modifier = {
-		researcher_jobs_bonus_workforce_mult = 0.05
-		planet_researchers_upkeep_mult = -0.01
+# trait_brilliant = {
+# 	cost = 2
+# 	category = normal
+# 	species_possible_add = {
+# 		can_add_genetic_traits = yes
+# 	}
+# 	species_possible_remove = {
+# 		OR = {
+# 			can_remove_beneficial_genetic_traits = yes
+# 			can_remove_vocational_genetic_traits = yes
+# 		}
+# 	}
+# 	species_possible_merge_remove = {
+# 		always = yes
+# 	}
+# 	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
+# 	allowed_archetypes = { BIOLOGICAL LITHOID }
+# 	localized_tags = {
+# 		SPECIES_TRAIT_VOCATIONAL
+# 	}
+# 	tags = { organic positive pop_output research }
+# 	modifier = {
+# 		researcher_jobs_bonus_workforce_mult = 0.05
+# 		planet_researchers_upkeep_mult = -0.01
 		
-	}
-	slave_cost = {
-		energy = 500
-	}
-	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_research_designation = yes }
-		}
-		modifier = {
-			add = 1.5
-			from = { has_building = building_order_keep }
-		}
-	}
-}
+# 	}
+# 	slave_cost = {
+# 		energy = 500
+# 	}
+# 	assembly_score = {
+# 		modifier = {
+# 			add = 1.5
+# 			from = { has_research_designation = yes }
+# 		}
+# 		modifier = {
+# 			add = 1.5
+# 			from = { has_building = building_order_keep }
+# 		}
+# 	}
+# }
 
 
 
-trait_cave_dweller = {
-	cost = 2
-	opposites = { "trait_plantoid_phototrophic" }
-	sorting_priority = 20
+# trait_cave_dweller = {
+# 	cost = 2
+# 	opposites = { "trait_plantoid_phototrophic" }
+# 	sorting_priority = 20
 
-	initial = no
-	randomized = no
-	immortal_leaders = no
+# 	initial = no
+# 	randomized = no
+# 	immortal_leaders = no
 
-	species_potential_add = {
-		always = no
-	}
-	species_possible_remove = {
-		always = no
-	}
-	species_possible_merge_add = {
-		always = no
-	}
+# 	species_potential_add = {
+# 		always = no
+# 	}
+# 	species_possible_remove = {
+# 		always = no
+# 	}
+# 	species_possible_merge_add = {
+# 		always = no
+# 	}
 
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	tags = { organic positive habitability mineral production interesting special }
-	ai_weight = {
-		weight = 0
-	}
+# 	allowed_archetypes = { BIOLOGICAL LITHOID }
+# 	tags = { organic positive habitability mineral production interesting special }
+# 	ai_weight = {
+# 		weight = 0
+# 	}
 
-	icon = "gfx/interface/icons/traits/trait_cave_dweller.dds"
-	custom_tooltip_with_modifiers = trait_cave_dweller_tooltip
-	modifier = {
-		habitability_floor_add = 0.5
-		miner_jobs_bonus_workforce_mult = 0.1
-		species_empire_size_mult = 0.10
-	}
-	triggered_planet_growth_habitability_modifier = {
-		potential = {
-			exists = from
-			from = {
-				is_archetype = BIOLOGICAL
-			}
-		}
-		logistic_growth_mult = -0.2
-	}
-	slave_cost = {
-		energy = 500
-	}
-	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
-	}
-}
+# 	icon = "gfx/interface/icons/traits/trait_cave_dweller.dds"
+# 	custom_tooltip_with_modifiers = trait_cave_dweller_tooltip
+# 	modifier = {
+# 		habitability_floor_add = 0.5
+# 		miner_jobs_bonus_workforce_mult = 0.1
+# 		species_empire_size_mult = 0.10
+# 	}
+# 	triggered_planet_growth_habitability_modifier = {
+# 		potential = {
+# 			exists = from
+# 			from = {
+# 				is_archetype = BIOLOGICAL
+# 			}
+# 		}
+# 		logistic_growth_mult = -0.2
+# 	}
+# 	slave_cost = {
+# 		energy = 500
+# 	}
+# 	assembly_score = {
+# 		modifier = {
+# 			add = 1.5
+# 			from = { has_mining_designation = yes }
+# 		}
+# 		modifier = {
+# 			add = 0.5
+# 			from = { has_rural_designation = yes }
+# 		}
+# 	}
+# }
 
-trait_photosensitive
+# trait_photosensitive
 
-trait_wrothful
+# trait_wrothful
 
-trait_cunning
+# trait_cunning
 
-trait_ruthless
+# trait_ruthless
 
-#trait_arrogant = {
-#	cost = 2
-#	species_possible_add = {
-#		can_add_genetic_traits = yes
-#	}
-#	species_possible_remove = {
-#		OR = {
-#			can_remove_beneficial_genetic_traits = yes
-#		}
-#	}
-#	allowed_archetypes = { BIOLOGICAL LITHOID }
-#	tags = { organic positive pop_output unity }
-#	icon = "gfx/interface/icons/traits/trait_existential_iteroparity.dds"
-#	custom_tooltip = TRAIT_ZEAL_EFFECT
-#	triggered_planet_growth_habitability_modifier = {
-#		potential = {
-#			exists = owner
-#			owner = {
-#				OR = {
-#					is_at_war = yes
-#					has_crisis = yes
-#				}
-#			}
-#		}
-#		happiness
-#	}
-#	slave_cost = {
-#		energy = 1000
-#	}
-#}
+# #trait_arrogant = {
+# #	cost = 2
+# #	species_possible_add = {
+# #		can_add_genetic_traits = yes
+# #	}
+# #	species_possible_remove = {
+# #		OR = {
+# #			can_remove_beneficial_genetic_traits = yes
+# #		}
+# #	}
+# #	allowed_archetypes = { BIOLOGICAL LITHOID }
+# #	tags = { organic positive pop_output unity }
+# #	icon = "gfx/interface/icons/traits/trait_existential_iteroparity.dds"
+# #	custom_tooltip = TRAIT_ZEAL_EFFECT
+# #	triggered_planet_growth_habitability_modifier = {
+# #		potential = {
+# #			exists = owner
+# #			owner = {
+# #				OR = {
+# #					is_at_war = yes
+# #					has_crisis = yes
+# #				}
+# #			}
+# #		}
+# #		happiness
+# #	}
+# #	slave_cost = {
+# #		energy = 1000
+# #	}
+# #}
 
-trait_zeal = {
-	cost = 2
-	species_possible_add = {
-		can_add_genetic_traits = yes
-	}
-	species_possible_remove = {
-		OR = {
-			can_remove_beneficial_genetic_traits = yes
-		}
-	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	tags = { organic positive pop_output unity }
-	icon = "gfx/interface/icons/traits/trait_existential_iteroparity.dds"
-	custom_tooltip = TRAIT_ZEAL_EFFECT
-	triggered_pop_group_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_at_war = yes
-					has_crisis = yes
-				}
-			}
-		}
-		pop_soldier_bonus_workforce_mult = 0.25
-		pop_high_priest_bonus_workforce_mult = 0.25
-		pop_bureaucrat_bonus_workforce_mult = 0.25
-		pop_happiness_negative_slave = 20
-	}
-	slave_cost = {
-		energy = 1000
-	}
-}
+# trait_zeal = {
+# 	cost = 2
+# 	species_possible_add = {
+# 		can_add_genetic_traits = yes
+# 	}
+# 	species_possible_remove = {
+# 		OR = {
+# 			can_remove_beneficial_genetic_traits = yes
+# 		}
+# 	}
+# 	allowed_archetypes = { BIOLOGICAL LITHOID }
+# 	tags = { organic positive pop_output unity }
+# 	icon = "gfx/interface/icons/traits/trait_existential_iteroparity.dds"
+# 	custom_tooltip = TRAIT_ZEAL_EFFECT
+# 	triggered_pop_group_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				OR = {
+# 					is_at_war = yes
+# 					has_crisis = yes
+# 				}
+# 			}
+# 		}
+# 		pop_soldier_bonus_workforce_mult = 0.25
+# 		pop_high_priest_bonus_workforce_mult = 0.25
+# 		pop_bureaucrat_bonus_workforce_mult = 0.25
+# 		pop_happiness_negative_slave = 20
+# 	}
+# 	slave_cost = {
+# 		energy = 1000
+# 	}
+# }
 
-#trait_intelligent = {
-#	cost = 2
-#	category = normal
-#	species_possible_add = {
-#		can_add_genetic_traits = yes
-#	}
-#	species_possible_remove = {
-#		OR = {
-#			can_remove_beneficial_genetic_traits = yes
-#			can_remove_vocational_genetic_traits = yes
-#		}
-#	}
-#	species_possible_merge_remove = {
-#		always = yes
-#	}
-#	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
-#	allowed_archetypes = { BIOLOGICAL LITHOID }
-#	localized_tags = {
-#		SPECIES_TRAIT_VOCATIONAL
-#	}
-#	tags = { organic positive pop_output research }
-#	modifier = {
-#		researcher_jobs_bonus_workforce_mult = 0.10
-#	}
-#	slave_cost = {
-#		energy = 500
-#	}
-#	assembly_score = {
-#		modifier = {
-#			add = 1.5
-#			from = { has_research_designation = yes }
-#		}
-#		modifier = {
-#			add = 1.5
-#			from = { has_building = building_order_keep }
-#		}
-#	}
-#}
+# #trait_intelligent = {
+# #	cost = 2
+# #	category = normal
+# #	species_possible_add = {
+# #		can_add_genetic_traits = yes
+# #	}
+# #	species_possible_remove = {
+# #		OR = {
+# #			can_remove_beneficial_genetic_traits = yes
+# #			can_remove_vocational_genetic_traits = yes
+# #		}
+# #	}
+# #	species_possible_merge_remove = {
+# #		always = yes
+# #	}
+# #	opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
+# #	allowed_archetypes = { BIOLOGICAL LITHOID }
+# #	localized_tags = {
+# #		SPECIES_TRAIT_VOCATIONAL
+# #	}
+# #	tags = { organic positive pop_output research }
+# #	modifier = {
+# #		researcher_jobs_bonus_workforce_mult = 0.10
+# #	}
+# #	slave_cost = {
+# #		energy = 500
+# #	}
+# #	assembly_score = {
+# #		modifier = {
+# #			add = 1.5
+# #			from = { has_research_designation = yes }
+# #		}
+# #		modifier = {
+# #			add = 1.5
+# #			from = { has_building = building_order_keep }
+# #		}
+# #	}
+# #}

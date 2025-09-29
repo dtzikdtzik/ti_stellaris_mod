@@ -1,18 +1,18 @@
 munitions_reserves = { ### name?
-	length = @sacrificeDuration ##### uhhhh not ideal 
+	length = 360 ##### uhhhh not ideal 
 	icon = "GFX_edict_type_policy" ### wait they have icons?
 
 	resources = {
-		category = edicts
+		category = campaigns
 		cost = {
-			trade = @Edict3Cost ##### look up edict1cost, etc
+			trade = 100
+			multiplier = value:edict_size_effect ##### look up edict1cost, etc
 			# but a one-time spend akin to sacrifices would be nicest #
 			### waaaaait this is already the cost seperated from the upkeep!! ##
 			multiplier = value:edict_size_effect ### change this
 		}
 		upkeep = { 
-			trade = @Edict1Cost
-			multiplier = value:edict_size_effect
+			trade = 0
 			#### try to keep this empty instead ###
 		}
 	}

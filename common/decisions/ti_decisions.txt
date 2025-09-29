@@ -6,7 +6,7 @@ decision_deploy_dunlain_reapers = {
 	resources = {
 		category = decisions
 		cost = {
-			alloys = 300
+			alloys = 800
 			## TODO: make cost and armies scale with planet size
 		}
 	}
@@ -20,7 +20,14 @@ decision_deploy_dunlain_reapers = {
 	}
 
 	effect = {
-		add_modifier = { modifier = "dunlain_reapers_deployed" days = 720 } #what is the days for
+		add_modifier = { modifier = "dunlain_reapers_deployed" days = -1 }
+		# spawn dunlain reaper defense armies on the planet would be cool
+		create_army_on_planet = {
+			type = dunlain_reaper_defense
+			amount = 2
+			planet = root
+			owner = root
+		}
 		### how to spawn defense armies
 		# look at martial law (which doesn't exist anymore damn) and commanders
 	}

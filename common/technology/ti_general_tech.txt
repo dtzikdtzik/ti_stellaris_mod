@@ -1,0 +1,37 @@
+tech_plasma_scoring = { 
+	area = engineering
+	tier = 1
+	category = { materials }
+	cost = @tier1cost1
+	weight = 0
+	start_tech = yes
+
+	potential = {
+		has_origin = origin_barony
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.25
+		weapon_type_energy_weapon_damage_mult = 0.05
+	}
+}
+
+tech_antimass_deflectors = { 
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	cost = @tier1cost2
+	weight = 0
+	start_tech = yes
+
+	potential = {
+		has_origin = origin_barony
+	}
+
+	modifier = {
+		damage_vs_country_type_crystal_mult = 0.25
+		damage_vs_country_type_cutholoids_mult = 0.25
+		ship_shield_mult = 0.05
+		stations_minerals_produces_mult = 0.10
+	}
+}

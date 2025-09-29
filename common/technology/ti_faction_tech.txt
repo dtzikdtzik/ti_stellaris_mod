@@ -13,20 +13,20 @@ tech_NES = { ##TODO: create the shield module
 		}	
 }
 
-tech_l4_disruptors = {
-	cost = @tier1cost3
-	area = engineering
-	tier = 2
-	## all WIP
-	category = {  }
-	prerequisites = {}
-	weight = @tier1weight3
-	start_tech = no
+# tech_l4_disruptors = {
+# 	cost = @tier1cost3
+# 	area = engineering
+# 	tier = 2
+# 	## all WIP
+# 	category = {  }
+# 	prerequisites = {}
+# 	weight = @tier1weight3
+# 	start_tech = no
 
-	potential = {  #does potential work here? otherwise use weight_modifier?
-			has_country_flag = letnev_flag
-		}	
-	## unlockabs component which lets fleets ignore ftl disruptors???
-	# or even more complex ignore army damage during initial combat days
-	# need a placeholder effect before i figure that one out
-}
+# 	potential = {  #does potential work here? otherwise use weight_modifier?
+# 			has_country_flag = letnev_flag
+# 		}	
+# 	## unlockabs component which lets fleets ignore ftl disruptors???
+# 	# or even more complex ignore army damage during initial combat days
+# 	# need a placeholder effect before i figure that one out
+# }

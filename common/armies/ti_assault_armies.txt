@@ -5,7 +5,6 @@ letnev_mech = {
 	damage = 3.00
 	health = 4.00
 	morale = 3.00
-	morale_damage = 3.0
 	collateral_damage = 2.0
 	war_exhaustion = 2.0
 	# can i set a "mech" flag for this? 
@@ -32,11 +31,29 @@ letnev_mech = {
 			owner = { has_country_flag = letnev
 				NOT = {
 					check_variable = {
-						which = "letnev_mech_count" #do I need to make a variable
+						which = "letnev_mech_soldier_count" #do I need to make a variable
 						value >= 4 #wait if I get 5 somehow can I produce
 						# unlimited mechs? not good
 					}
 				}
+			}
+		}
+	}
+
+	on_queued = {
+		owner = {
+			change_variable = {
+				which = "letnev_mech_soldier_count"
+				value = 1
+			}
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = {
+				which = "letnev_mech_soldier_count"
+				value = -1
 			}
 		}
 	}

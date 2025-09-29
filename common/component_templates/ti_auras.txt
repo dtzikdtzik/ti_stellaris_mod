@@ -1,0 +1,90 @@
+# flagships #
+
+utility_component_template = {
+	key = "NES"
+	size = medium
+	icon = "GFX_ship_part_NES" ### this is another seperate sprite document huh
+	icon_frame = 1
+	power = 0
+
+	friendly_aura = {
+		name = "NES"
+		radius = 1
+		apply_on = ships
+		stack_info = { 
+			id = friendly_aura_NES
+			priority = 1
+		}
+
+		modifier = {
+		shipsize_battleship_shield_mult = 1
+		}
+	}
+
+	potential = {
+		OR = {
+			
+		}
+		owner = { has_origin = origin_barony }
+	}
+
+	prerequisites = {
+		tech_NES
+		tech_battleships
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_AURA_ARC_SECUNDUS"
+	size = medium
+	icon = "GFX_ship_part_aura_arc_secundus"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		OR = {
+			ship_uses_titan_components = yes
+			ship_uses_dsc_components = yes
+		}
+		owner = { has_origin = origin_barony }
+	}
+	component_set = "ship_aura_components"
+
+	modifier = {
+		ship_armor_regen_add_static = 100
+	}
+
+	friendly_aura = {
+		name = "aura_arc_secundus"
+		radius = 240 
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_aura_arc_secundus
+			priority = 10
+		}
+
+		modifier = {
+			ship_orbital_bombardment_mult = 1.0
+		}
+	}
+
+	hostile_aura = {
+		name = "aura_arc_secundus"
+		radius = 240 ###@shipAuraRange ### nothing is defined why???
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = hostile_aura_arc_secundus
+			priority = 10
+		}
+
+		modifier = {
+			ship_shield_mult = -0.15
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}

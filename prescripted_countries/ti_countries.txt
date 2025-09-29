@@ -4,12 +4,13 @@ letnev = {
 
 	species = {
 		class = "HUM"
-		portrait = "humanoid_05"
+		portrait = "letnev"
 		name = "Letnev"
 		plural = "Letnev"
 		adjective = "Letnevan"
 		name_list = "MACHINE1"
-		trait = "trait_cave_dweller"
+		trait = "trait_organic"
+		#trait = "trait_cave_dweller"
 		## used by Spacht, probably deprecated
 		#trait = "trait_wasteful" #no
 		#trait = "trait_industrious" #maybe
@@ -51,7 +52,7 @@ letnev = {
 	ruler = {
 		gender = male
 		name = "Daz Emmiciel Werqan"
-		portrait = "humanoid_05_male_01"
+		portrait = "letnev01"
 		texture = 0
 		attachment = 0
 		clothes = 0
@@ -63,7 +64,7 @@ letnev = {
 		leader_class = "official"
 	}
 	
-	flags = { letnev_flag custom_start_screen }
+	flags = { letnev letnev_flag custom_start_screen }
 	
 	spawn_as_fallen = no
 	ignore_portrait_duplication = no
@@ -76,5 +77,5 @@ letnev = {
 		"civic_grand_armada"
 		"civic_munitions_reserves"
 	}
-	origin = "origin_subterranean"
+	origin = "origin_barony"
 }

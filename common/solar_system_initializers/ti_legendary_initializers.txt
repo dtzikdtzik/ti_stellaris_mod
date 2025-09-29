@@ -1,252 +1,252 @@
-# Mecatol Initializer
-mecatol_init = {
-	class = sc_g
-	usage = misc_system_init
-	name = "Gul"
-	usage_odds = {
-		base = 100
-		modifier = {
-			factor = 10
-			is_bottleneck_system = yes
-		}
-		modifier = {
-			factor = 100
-			distance_to_core_percent < 20
-		}
-		modifier = {
-			factor = 10
-			distance_to_core_percent < 40
-		}
-		modifier = {
-			factor = 0
-			is_fe_cluster = yes
-		}
-		modifier = {
-			factor = 0
-			has_star_flag = empire_cluster
-		}
-#		modifier = {
-#			factor = 0
-#			is_rim_system = yes
-#		}
-#		modifier = {
-#			factor = 0
-#			distance_to_core_percent > 60
-#		}
-	}
+# # Mecatol Initializer
+# mecatol_init = {
+# 	class = sc_g
+# 	usage = misc_system_init
+# 	name = "Gul"
+# 	usage_odds = {
+# 		base = 100
+# 		modifier = {
+# 			factor = 10
+# 			is_bottleneck_system = yes
+# 		}
+# 		modifier = {
+# 			factor = 100
+# 			distance_to_core_percent < 20
+# 		}
+# 		modifier = {
+# 			factor = 10
+# 			distance_to_core_percent < 40
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			is_fe_cluster = yes
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			has_star_flag = empire_cluster
+# 		}
+# #		modifier = {
+# #			factor = 0
+# #			is_rim_system = yes
+# #		}
+# #		modifier = {
+# #			factor = 0
+# #			distance_to_core_percent > 60
+# #		}
+# 	}
 
-	max_instances = 1
-	spawn_chance = 100
+# 	max_instances = 1
+# 	spawn_chance = 100
 
-	init_effect = {
-		save_global_event_target_as = mecatolsystem
-	}
+# 	init_effect = {
+# 		save_global_event_target_as = mecatolsystem
+# 	}
 
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 50
-	}
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 50
+# 	}
 		
-	flags = { mecatol_system_flag }
+# 	flags = { mecatol_system_flag }
 	
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
-	}
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = { min = 20 max = 30 }
+# 		has_ring = no
+# 	}
 		
-	change_orbit = 50
+# 	change_orbit = 50
 	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = 20
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = { min = 0 max = 1 }
+# 		orbit_distance = 20
+# 		class = random_non_colonizable
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 1 }
+# 			class = random_non_colonizable
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 
-	planet = {
-		count = 1
-		name = "Jun "
-		orbit_distance = 20
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = 1
+# 		name = "Jun "
+# 		orbit_distance = 20
+# 		class = random_non_colonizable
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 1 }
+# 			class = random_non_colonizable
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 	
-	planet = {
-		count = 1
-		name = "Mecatol Rex"
-		orbit_distance = 20
-		class = pc_shielded
-		orbit_angle = { min = 90 max = 270 }
-		has_ring = no
-		size = 24
-		deposit_blockers = none
-		modifiers = none
+# 	planet = {
+# 		count = 1
+# 		name = "Mecatol Rex"
+# 		orbit_distance = 20
+# 		class = pc_shielded
+# 		orbit_angle = { min = 90 max = 270 }
+# 		has_ring = no
+# 		size = 24
+# 		deposit_blockers = none
+# 		modifiers = none
 		
-		flags = { mecatol_planet_flag renamed }
+# 		flags = { mecatol_planet_flag renamed }
 		
-		init_effect = {
-			add_deposit = d_alloys_25
-		#	add_deposit = d_engineering_10
-		#	add_deposit = d_physics_10
-		#	add_deposit = d_society_10
-			prevent_anomaly = yes
-			save_global_event_target_as = mecatolplanet
+# 		init_effect = {
+# 			add_deposit = d_alloys_25
+# 		#	add_deposit = d_engineering_10
+# 		#	add_deposit = d_physics_10
+# 		#	add_deposit = d_society_10
+# 			prevent_anomaly = yes
+# 			save_global_event_target_as = mecatolplanet
 
-			create_species = {
-				name = "Winnaran"
-				class = HUM
-				portrait = humanoid_03
-				namelist = "WINNU"
-				traits = {
-					trait = "trait_traditional"
-					trait = "trait_conformists"
-					trait = "trait_decadent"
-				}
-			}
+# 			create_species = {
+# 				name = "Winnaran"
+# 				class = HUM
+# 				portrait = humanoid_03
+# 				namelist = "WINNU"
+# 				traits = {
+# 					trait = "trait_traditional"
+# 					trait = "trait_conformists"
+# 					trait = "trait_decadent"
+# 				}
+# 			}
 
-			last_created_species = {
-				save_global_event_target_as = winnaranspecies
-			}
+# 			last_created_species = {
+# 				save_global_event_target_as = winnaranspecies
+# 			}
 			
-			create_country = {
-				name = "Winnaran Custodians"
-				adjective = "custodial"
-				type = mecatol
-				authority = "auth_dictatorial"
-				name_list = "WINNU"
-				ignore_initial_colony_error = yes
-				flag = {
-					icon = {
-						category = "blocky"
-						file = "flag_blocky_16.dds"
-					}
-					background = {
-						category = "backgrounds"
-						file = "pattern_01.dds"
-					}
-					colors = {
-						"red"
-						"dark_blue"
-						"null"
-						"null"
-					}
-				}
-				species = last_created_species
-				ethos = {
-					ethic = "ethic_authoritarian"
-					ethic = "ethic_fanatic_xenophobe"
-				}
-				civics = { civic = civic_winnaran_custodians }	
-			}
+# 			create_country = {
+# 				name = "Winnaran Custodians"
+# 				adjective = "custodial"
+# 				type = mecatol
+# 				authority = "auth_dictatorial"
+# 				name_list = "WINNU"
+# 				ignore_initial_colony_error = yes
+# 				flag = {
+# 					icon = {
+# 						category = "blocky"
+# 						file = "flag_blocky_16.dds"
+# 					}
+# 					background = {
+# 						category = "backgrounds"
+# 						file = "pattern_01.dds"
+# 					}
+# 					colors = {
+# 						"red"
+# 						"dark_blue"
+# 						"null"
+# 						"null"
+# 					}
+# 				}
+# 				species = last_created_species
+# 				ethos = {
+# 					ethic = "ethic_authoritarian"
+# 					ethic = "ethic_fanatic_xenophobe"
+# 				}
+# 				civics = { civic = civic_winnaran_custodians }	
+# 			}
 
-		#	set_owner = last_created_country
+# 		#	set_owner = last_created_country
 
-			last_created_country = {
-				set_graphical_culture = mammalian_01
-				create_leader = {
-					name = random
-					species = last_created_species
-					class = official
-					skill = 10
-					set_age = 40
-					traits = {
-						trait = leader_trait_principled
-					}
-				}
-				save_global_event_target_as = winnaranleader
-				set_leader = event_target:winnaranleader
-				create_fleet = {
-					name = "Mecatol Citadel"
-					effect = {
-						set_owner = last_created_country
-						set_location = event_target:mecatolplanet
-						create_ship = {
-							name = "Mecatol Citadel"
-							design = "Pax Lazax"
-						}
-						set_fleet_flag = mecatolstation
-						save_event_target_as = custodiancapital
-						prev = {
-							set_custom_capital_location = event_target:custodiancapital
-						}	
-					}
-				}
-			}
+# 			last_created_country = {
+# 				set_graphical_culture = mammalian_01
+# 				create_leader = {
+# 					name = random
+# 					species = last_created_species
+# 					class = official
+# 					skill = 10
+# 					set_age = 40
+# 					traits = {
+# 						trait = leader_trait_principled
+# 					}
+# 				}
+# 				save_global_event_target_as = winnaranleader
+# 				set_leader = event_target:winnaranleader
+# 				create_fleet = {
+# 					name = "Mecatol Citadel"
+# 					effect = {
+# 						set_owner = last_created_country
+# 						set_location = event_target:mecatolplanet
+# 						create_ship = {
+# 							name = "Mecatol Citadel"
+# 							design = "Pax Lazax"
+# 						}
+# 						set_fleet_flag = mecatolstation
+# 						save_event_target_as = custodiancapital
+# 						prev = {
+# 							set_custom_capital_location = event_target:custodiancapital
+# 						}	
+# 					}
+# 				}
+# 			}
 
 			
 
-		}	
-	}
+# 		}	
+# 	}
 
 	
-	planet = {
-		count = { min = 1 max = 2 }
-		orbit_distance = 20
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = { min = 1 max = 2 }
+# 		orbit_distance = 20
+# 		class = random_non_colonizable
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 1 }
+# 			class = random_non_colonizable
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 
-	planet = {
-		count = 1
-		name = "Semani "
-		orbit_distance = 20
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = 1
+# 		name = "Semani "
+# 		orbit_distance = 20
+# 		class = pc_gas_giant
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 3 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 3 }
+# 			class = random_non_colonizable
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 	
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = 20
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = { min = 0 max = 1 }
+# 		orbit_distance = 20
+# 		class = pc_gas_giant
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 
-		moon = {
-			count = { min = 0 max = 3 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-}
+# 		moon = {
+# 			count = { min = 0 max = 3 }
+# 			class = random_non_colonizable
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
+# }

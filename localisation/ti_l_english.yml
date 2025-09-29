@@ -3,18 +3,23 @@
 
 l_english:
 
+#letnev
 civic_grand_armada:0 "Armada"
 civic_grand_armada_desc:0 "'Our armada will blot out their sun. When they die, they will die in darkness.' -Baron Unlenn" 
 ##"This civilization aspires to build a grand and terrible fleet, capable of projecting their influence across the galaxy."
 civic_grand_armada_effects:0 "effects placeholder text."
 councilor_grand_armada:0 "Rear Admiral"
 councilor_grand_armada_desc:0 "The Rear Admiral oversees the construction and reinforcement of the fleet, ensuring that the spacedocks never fall silent"
+origin_barony_desc:0 "It was the Letnev who led three revolts against the Lazax at the height of their power. And it was the Letnev, who, through their blockade of the Quann wormhole, ignited the conflict which finally toppled the decrepit empire and ushered in the years of darkness. As the great races rise once more, Baron Daz Emmiciel Werqan III will lead his people to final dominance. He must be Emperor, at any cost."
+origin_tooltip_barony_effects:0 "Play as the Barony of Letnev, with a unique starting system, exclusive technologies, leaders, and more."
 
 civic_munitions_reserves:0 "Munitions Reserves"
 civic_munitions_reserves_desc:0 "War is inevitable. This civilization never ceases to prepare, investing heavily into large stockpiles of arms and ammunition to supply their military during prolonged conflicts."
 civic_munitions_reserves_effects:0 "Grants access to the 'Indiscriminiate Barrage' edict."
 councilor_munitions_reserves:0 "Secretary of the Armory"
 councilor_munitions_reserves_desc:0 "The Secretary of the Armory oversees the production and stockpiling of arms and ammunition, ensuring that the military is always well-supplied."
+
+dunlain_reapers_deployed:0 "'They will not take this world. Call in the Reapers!'"
 
 NAME_LETNEV:0 "Letnev"
 NAME_arc_prime:0 "Arc Prime"
@@ -23,9 +28,12 @@ NAME_wren_terra:0 "Wren Terra"
 tech_NES:0 "Non-Euclidean Shielding"
 tech_NES_desc:0 "By bending space, the brightest Letnev minds have developed incredible shielding for their capital ships, surpassing even the ancient technology lost in the Twilight Wars."
 
+
+civic_winnaran_custodians:0 "Winnaran Custodians"
+civic_winnaran_custodians_desc:0 "The most loyal subjects of the old Lazax empire, the surviving Winnaran on Mecatol Rex believe themselves the rightful custodians of the Imperial Throne. They await the return of their old masters,"
+
 civic_gunboat_diplomacy:0 "Gunboat Diplomacy"
 civic_gunboat_diplomacy_desc:0 "A wise leader may find the threat of force far more useful than its deployment."
-civic_gunboat_diplomacy_effects:0 "Grants access to uhhhh placeholder text."
 
 tech_advanced_shields:0 "REPLACE_ME"
 tech_advanced_shields_desc:0 "REPLACE_ME"
@@ -91,7 +99,8 @@ guild_of_assassins:0 "Guild of Spies"
  origin_masters_of_technology_desc:0 "REPLACE_ME"
 
 councilor_gunboat_diplomacy:0 "Supreme Admiral"
-councilor_gunboat_diplomacy_desc:0 "<em>'The sight of a fleet of our warships, line abreast and guns out, states our demands more clearly than a thousand diplomats.'</em><br>—Rear Admiral Farran"
+councilor_gunboat_diplomacy_desc:0 "The Supreme Admiral formally functions as head and representative of the military, though their main role lies in foreign affairs."
+#"<em>'The sight of a fleet of our warships, line abreast and guns out, states our demands more clearly than a thousand diplomats.'</em><br>—Rear Admiral Farran"
 
 triggered_opinion_mecatol_claimed:0 "Mecatol Envy"
 triggered_opinion_mecatol_claimed_vassal:0 "Mecatol Respect"

@@ -8,7 +8,7 @@ cimm_fenn = {
 	visual_ethic = "imperialist_visual_ethic" #placeholder? what does it do
 
 	unique = yes
-	support_multiplier = 1
+	support_multiplier = 0.75
 
 	resources = {
 		category = pop_factions
@@ -21,13 +21,44 @@ cimm_fenn = {
 					}
 				}
 			}
-			unity = @faction_base_output
+			influence = 0.01
 			### play with this?
 			### so is this how a trigger works?
 		}
+		upkeep = {
+			unity = 0.01
+		}
 	}
 
-	## extortion block would go here ##
+	extortion_resource = {
+		category = pop_factions
+		produces = {
+			trigger = {
+				owner = {
+					NOR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			alloys = @faction_base_output
+			mult = @faction_extortion_alloys_ratio
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_civic = civic_crowdsourcing
+						has_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			engineering_research = @faction_major_output
+			society_research = @faction_minor_output
+			mult = @faction_extortion_crowdsourcing_ratio
+		}
+	}
+
 
 	is_potential = {
 		is_faction_allowed = yes
@@ -55,7 +86,7 @@ cimm_fenn = {
 	}
 
 	attraction = {
-		base = 100
+		base = 50
 
 		modifier = {
 			factor = 0.5
@@ -63,8 +94,90 @@ cimm_fenn = {
 		}
 	}
 
+	leader = {
+		base = 75
+
+		modifier = {
+			factor = 0.0
+			is_event_leader = yes
+		}
+	}
+
 	demand = {
 		title = "active_espionage"
-		unfulfilled_title  ""
+		unfulfilled_title = "no_operation"
+		desc = "faction_demand_active_espionage_desc"
+
+		unfulfilled_effect = -0.001
+		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					is_country_type = default
+					NOT = { exists = overlord }
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				is_running_espionage_operation = yes
+			}
+		}
+	}
+
+	demand = {
+		title = "spy_network"
+		unfulfilled_title = "no_spy_network"
+		desc = "faction_demand_spy_network_desc"
+
+		unfulfilled_effect = -30
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					is_country_type = default
+					NOT = { exists = overlord }
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_spynetwork = yes
+			}
+		}
+	}
+
+	demand = {
+		title = "subterfuge_tradition"
+		unfulfilled_title = "no_subterfuge"
+		desc = "faction_demand_subterfuge_desc"
+
+		unfulfilled_effect = -0.001
+		fulfilled_effect = 15
+
+		potential = {
+			exists = owner
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					is_country_type = default
+					NOT = { exists = overlord }
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_tradition = tr_subterfuge_adopt
+			}
+		}
 	}
 }

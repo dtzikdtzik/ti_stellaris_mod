@@ -31,11 +31,20 @@ councilor_munitions_reserves = {
 	}
 	civic = civic_munitions_reserves
 	modifier = {
-		ships_trade_logistics_mult = -0.05 #this is a problem bc it may be trivial
-		ships_alloys_logistics_mult = -0.05 #and because the logistics system is problematic generally
+		ships_logistics_mult = -0.05 #this is a problem bc it may be trivial
+		#ships_alloys_logistics_mult = -0.05 #and because the logistics system is problematic generally
 		#PREVIOUSLY:
 		#country_resource_max_alloys_add = 5000
 		#country_resource_max_minerals_add = 10000
 		#this was dumb because you would lose all your stored resources if you lost the councilor
+	}
+}
+
+councilor_gunboat_diplomacy = {
+	leader_class = { commander official }
+	civic = civic_gunboat_diplomacy
+	modifier = {
+		country_subject_acceptance_add = 1
+		diplo_action_acceptance_add = 1 #does this work
 	}
 }

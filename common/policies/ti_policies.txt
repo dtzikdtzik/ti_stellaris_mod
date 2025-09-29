@@ -11,9 +11,7 @@ diplomatic_stance = {
 			is_country_type = awakened_fallen_empire
 			is_country_type = primitive
 			is_country_type = awakened_marauders
-			is_country_type = mirrored_country
-			is_country_type = exiled
-		}
+			is_country_type = mirrored_country		}
 	}
 
 	allow = {
@@ -22,7 +20,7 @@ diplomatic_stance = {
 
 	option = {
 		name = "diplo_stance_disdainful"
-		icon = "GFX_diplomatic_stance_disdainful"
+		icon = "GFX_diplomatic_stance_belligerent"
 
 		potential = {
 			OR = {
@@ -306,7 +304,6 @@ diplomatic_stance = {
 			OR = {
 				is_country_type = default
 				is_country_type = awakened_fallen_empire
-				is_country_type = exiled
 			}
 		}
 
