@@ -43,6 +43,13 @@ civic_calculating_precision_desc:0 "Whether the L1Z1X are the Lazax returned or 
 civic_assimilate:0 "Assimilate"
 civic_assimilate_desc:0 "Through cybernetic augmentation and network integration, this civilization makes use of conquered infrastructure and population with minimal disruption."
 
+no_operation:0 "No ongoing Operation"
+faction_demand_active_espionage_desc:0 "Contracting them for active missions will grant the Cimm Fenn's approval."
+no_spy_network:0 "No spy network"
+faction_demand_spy_network_desc:0 "The Cimm Fenn Masters expect the Baron to use their agency's talents."
+subterfuge_tradition:0 "Adopted the subterfuge tradition"
+no_subterfuge:0 "No subterfuge tradition"
+faction_demand_subterfuge_desc:0 "Ingraining intrigue and subterfuge in our culture through tradition will please the Cimm Fenn."
  
 civic_zealous_sentinels:0 "REPLACE_ME"
 civic_zealous_sentinels_desc:0 "REPLACE_ME"

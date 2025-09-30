@@ -1,0 +1,52 @@
+#portraits = {
+#	#letnev portraits
+#	letnev = {
+#		entity = "letnev01"
+#		clothes_selector = "no_texture"
+#		attachment_selector = "no_texture"
+#		greeting_sound = "mammalian_01_greetings"
+#		character_textures = {
+#		"gfx/models/portraits/humanoid/letnev01.dds"
+#		#"gfx/models/portraits/humanoid/letnev02.dds"
+#		#"gfx/models/portraits/humanoid/letnev03.dds"
+#		}
+#	}
+#}
+##### this is outdated formatting i think?? wiki guide uses it ####
+#	letnev02 = {
+#		texturefile = "gfx/models/portraits/humanoid/letnev01.dds"
+#		attachment_selector = "no_texture"
+#		clothes_selector = "no_texture"
+#		greeting_sound = "mammalian_01_greetings"
+#	}
+#}
+
+portraits = { 
+	letnev= { texture_file = "gfx/models/portraits/humanoid/letnev.dds" } ##is texture_file (vs character_textures) for static portraits??
+}
+
+portrait_groups = {
+	letnev = {
+		default = letnev
+		game_setup = {
+			add = {
+				trigger = { always = yes }
+				portraits = { letnev }
+			}
+		}
+		species = { #species portrait
+			add = {
+				trigger = { always = yes }
+				portraits = { letnev }
+			}
+
+		}
+		pop = { #pop portrait
+			add = {
+				trigger = {	always = yes }
+				portraits = { letnev }
+			}
+		}
+
+	}
+}
