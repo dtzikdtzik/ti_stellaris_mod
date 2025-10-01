@@ -1,4 +1,9 @@
-LET = {
+## a letnev species class ##
+# i may not need it, they can be humanoid #
+## NOT the same as a category, the species class does NOT determine where they show up in the editor ##
+## it merely determines inherent traits and stuff ##
+
+letnev = {
 	archetype = BIOLOGICAL
 	possible = {
 		authority = {
@@ -13,3 +18,19 @@ LET = {
  	move_pop_sound_effect = "moving_pop_confirmation"
  	#resources = {}
 }
+
+#LET = {
+#	archetype = BIOLOGICAL
+#	possible = {
+#		authority = {
+ #			NOT = {
+#				value = auth_machine_intelligence
+#				text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+#			}
+#		}
+#	}
+#	trait = "trait_organic"
+ #	graphical_culture = humanoid_01
+ #	move_pop_sound_effect = "moving_pop_confirmation"
+ #	#resources = {}
+#}

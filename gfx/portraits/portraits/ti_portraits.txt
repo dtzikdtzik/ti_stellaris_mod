@@ -1,0 +1,92 @@
+#portraits = {
+#	#letnev portraits
+#	letnev = {
+#		entity = "letnev01"
+#		clothes_selector = "no_texture"
+#		attachment_selector = "no_texture"
+#		greeting_sound = "mammalian_01_greetings"
+#		character_textures = {
+#		"gfx/models/portraits/humanoid/letnev01.dds"
+#		#"gfx/models/portraits/humanoid/letnev02.dds"
+#		#"gfx/models/portraits/humanoid/letnev03.dds"
+#		}
+#	}
+#}
+##### this is outdated formatting i think?? wiki guide uses it ####
+#	letnev02 = {
+#		texturefile = "gfx/models/portraits/humanoid/letnev01.dds"
+#		attachment_selector = "no_texture"
+#		clothes_selector = "no_texture"
+#		greeting_sound = "mammalian_01_greetings"
+#	}
+#}
+
+#portraits = { 
+	#letnev = { entity = "letnev" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_male_greeting_a"
+	#	character_textures = { "gfx/models/portraits/letnev/letnev.dds" }
+	#}
+	#letnev01 = { entity = "portrait_letnev_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_male_greeting_a"
+	#	character_textures = { "gfx/models/portraits/humanoid/letnev_01.dds" }
+	#}
+#}
+
+portraits = { 
+	letnev = { texturefile = "gfx/models/portraits/letnev/letnev.dds" } ##texturefile (in spite of objections) seems to be the way for statics
+	#
+	#
+	#
+}
+
+## what are entities where are they defined
+
+portrait_groups = {
+	letnev = {
+		default = letnev
+		game_setup = {
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					letnev
+				}
+			}
+		}
+		#species portrait
+		species = { 
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					letnev
+				}
+			}
+
+		}
+		#pop portrait
+		pop = { 
+			add = {
+				trigger = {	always = yes	}
+				portraits = {
+					letnev
+				}
+			}
+		}
+		#leader scope
+		leader = {
+			add = {
+				trigger = { always = yes	}
+				portraits = {
+					letnev
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = { always = yes	}
+				portraits = {
+					letnev
+				}
+			}
+		}
+
+	}
+}

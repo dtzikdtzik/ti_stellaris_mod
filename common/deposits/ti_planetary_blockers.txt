@@ -1,0 +1,61 @@
+@blocker_high = 10
+@blocker_low = 5
+@ranger_small_production = 0.5
+@ranger_large_production = 1
+@evopred_large_blocker_progress = 40
+@evopred_small_blocker_progress = 20
+### THIS is why i am missing variables ###
+## because they are listed at the beginning of the document and i didnt copy that ###
+
+d_industrial_pollution = {
+	time = 270
+
+	is_for_colonizable = no
+	category = deposit_cat_blockers
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_industry
+			planet = {
+				NOR = { 
+					has_building = building_foundry_1
+					has_building = building_foundry_2
+					has_building = building_foundry_3
+					### weird prereq maybe change
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = { energy = 2000 }
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+		district_farming_max_add = -2
+		logistic_growth_mult = -0.1
+	}
+
+	drop_weight = {
+		factor = 0
+	}
+
+}
+
+d_quarantined_slums = {
+	time = 270
+
+	is_for_colonizable = no
+	category = deposit_cat_blockers
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = no_medicine
+			has_building = building_medical_1
+			#has_established_contact = yes ### must be done another way
+			}
+	}
+}
+

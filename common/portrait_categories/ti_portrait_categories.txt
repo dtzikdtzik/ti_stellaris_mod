@@ -1,0 +1,19 @@
+# Categories of portrait sets used in empire design view.
+# Portrait sets are listed in portrait_sets database.
+
+#letnev = {
+#	name = letnev
+#
+#	sets = {
+#		letnev
+#	}
+#}
+
+### this makes letnev show up in the humanoid category ###
+humanoids = {
+	name = HUM
+
+	sets = {
+		letnev
+	}
+}

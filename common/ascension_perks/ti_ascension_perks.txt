@@ -1,0 +1,43 @@
+
+
+####################
+# BREAKTHROUGHS
+####################
+
+ap_gravleash_maneuvers = {
+	potential = {
+		owner = { has_origin = origin_barony }
+	}
+	possible = {
+		owner = { has_origin = "origin_barony" }
+	}
+	custom_tooltip = ap_gravleash_maneuvers_modifier_desc
+
+	modifier = {
+		shipsize_corvette_orbital_bombardment_mult = 0.15
+		shipsize_corvette_weapon_range_mult = 0.15
+		shipsize_corvette_weapon_damage = 0.15
+		shipsize_frigate_orbital_bombardment_mult = 0.15
+		shipsize_frigate_weapon_range_mult = 0.15
+		shipsize_frigate_weapon_damage = 0.15
+		shipsize_destroyer_weapon_range_mult = 0.15
+		shipsize_destroyer_orbital_bombardment_mult = 0.15
+		shipsize_destroyer_weapon_damage = 0.15
+		shipsize_cruiser_jumpdrive_cooldown_mult = -0.15
+		shipsize_cruiser_speed_mult = 0.15
+		shipsize_cruiser_evasion_mult = 0.15
+		shipsize_battleship_speed_mult = 0.15
+		shipsize_battleship_jumpdrive_cooldown_mult = -0.15
+		shipsize_battleship_evasion_mult = 0.15
+		shipsize_titan_speed_mult = 0.15
+		shipsize_titan_jumpdrive_cooldown_mult = -0.15
+		shipsize_titan_evasion_mult = 0.15
+	}
+###### I want to change this ######
+# a perfect representation would apply movement bonusses to the big ships and offense bonus to the small ships #
+# WHILE THEY ARE ACTIVE IN THE SAME FLEET #
+# currently this is funny but borderline useless #
+# easier to implement: get all the bonusses for all ships
+# but attach them to the ship techs
+# that way players don't have to build weird fleets (gravleash is weird even in TI4 as a breakthrough)
+}

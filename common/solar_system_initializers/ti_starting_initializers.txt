@@ -35,10 +35,19 @@ letnev_home_init = {
 			change_orbit = 4
 
 			deposit_blockers = none
-			modifiers = none
 
 			init_effect = {
 				prevent_anomaly = yes
+				add_deposit = d_industrial_pollution
+				add_deposit = d_fungus_caves
+				add_deposit = d_dunlain_crater
+				add_modifier = {
+					modifier = ao
+				}
+				add_modifier = {
+					modifier = cave_systems
+				}
+				add_building = building_automation_farming_1
 			}
 
 			init_effect = {

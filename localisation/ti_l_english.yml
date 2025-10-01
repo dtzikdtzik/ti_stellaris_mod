@@ -3,6 +3,29 @@
 
 l_english:
 
+
+ap_gravleash_maneuvers:0 "Gravleash Maneuvers"
+ap_gravleash_maneuvers_desc:0 "Through a unique combination of military technology and fleet doctrine, the Letnev have developed impressive battlefield maneuvers. Deploying their fleets synergistically, Letnev capital ships exhibit impressive maneuverability, while even the lightest escort vessels carry dangerous firepower."
+ap_gravleash_maneuvers_modifier_desc:0 "Corvettes, Frigates and Destroyers gain +15% weapon damage, +15% weapon range and +15% orbital bombardment damage. Cruisers, Battleships and the Flagship gain +15% evasion, +15% sublight speed and -15% jumpdrive cooldown."
+fungus_caves:0 "Fungus Caves"
+dunlain_crater:0 "Dunlain Crater"
+trait_letnev:0 "Letnev"
+trait_letnev_desc:0 "'In the blackness of space reside the Letnev. Whether the darkness is innate, or whether the Letnev brought it with them is unclear, for they are one and the same.'"
+letnev_organ_plural:0 "guts"
+letnev_hand_plural:0 "hands"
+letnev_ear_plural:0 "pointy ears"
+letnev_tooth_plural:0 "teeth"
+letnev_fossil_plural:0 "bones"
+letnev_remnant_plural:0 "dust"
+
+#letnev species
+letnev:0 "Letnev"
+letnev_desc:0 "A proud, warlike species, growing up in the undergound darkness of a barren world."
+letnev_plural:0 "Letnev"
+letnev_insult_01:0 "delusional tyrant"
+letnev_insult_plural_01:0 "pale bigots"
+letnev_compliment_01:0 "powerful"
+
 #letnev
 civic_grand_armada:0 "Armada"
 civic_grand_armada_desc:0 "'Our armada will blot out their sun. When they die, they will die in darkness.' -Baron Unlenn" 

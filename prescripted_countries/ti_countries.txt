@@ -1,9 +1,8 @@
 letnev = {
 	ship_prefix = "LBS"
-	playable = has_humanoids_local
 
 	species = {
-		class = "HUM"
+		class = "letnev"
 		portrait = "letnev"
 		name = "Letnev"
 		plural = "Letnev"
@@ -30,21 +29,21 @@ letnev = {
 	planet_name = "Arc Prime"
 	planet_class = "pc_arctic"
 	system_name = "Arc"
-	#initializer = "letnev_home_init"
-	graphical_culture = "nemesis_01"
+	initializer = "letnev_home_init"
+	graphical_culture = "humanoid_01"
 	city_graphical_culture = "humanoid_01"
 	empire_flag = {
 		icon = {
-			category = "ornate"
-			file = "flag_ornate_3.dds"
+			category = "twilight_imperium"
+			file = "flag_letnev.dds"
 		}
 		background = {
 			category = "backgrounds"
 			file = "diagonal.dds"
 		}
 		colors = {
-			"red"
-			"dark_grey"
+			"black"
+			"black"
 			"null"
 			"null"
 		}

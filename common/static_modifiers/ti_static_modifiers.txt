@@ -21,18 +21,27 @@
 ###
 
 ao = {
-	
+	habitability_floor_mult = 0.25
+	planet_jobs_unity_produces_mult = 0.25
+	spiritualist_attraction = 0.25
+}
+
+fungus_caves = {
+	country_base_food_produces_add = 10
 }
 
 cave_systems = { #arc prime, letnev tunnels
-	planet_orbital_bombardment_damage = -0.2
+	planet_orbital_bombardment_damage = -0.75
 #	army_defense_health_mult = 0.1
 	job_miner_add = 200
+	empire_size_districts_mult = 0.33
 }
+
+
 
 thin_atmosphere = {
 	district_farming_max_add = -4
-
+	pop_farmer_workforce_mult = -0.25
 }
 
 # dunlain reaper mech modifier

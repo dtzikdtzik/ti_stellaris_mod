@@ -1,3 +1,16 @@
+trait_letnev = {
+	cost = 0
+	category = normal
+	species_possible_add = { always = no }
+	species_possible_remove = { always = no }
+	allowed_archetypes = { BIOLOGICAL }
+	tags = { organic positive }
+	modifier = {
+		habitability_floor_add = 0.5
+		
+	}
+}
+
 # trait_brilliant = {
 # 	cost = 2
 # 	category = normal

@@ -24,3 +24,43 @@
 #		}
 #	}
 #}
+
+d_fungus_caves = {
+	is_for_colonizable = no
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		district_farming_max_add = 1
+	}
+
+	potential = {
+		is_dry = yes
+	}
+
+	drop_weight = {
+		factor = 0
+	}
+}
+
+d_dunlain_crater = {
+	custom_tooltip = d_dunlain_crater_desc
+	is_for_colonizable = no
+	use_for_min_max_adjustments = yes
+
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		job_trader_add = 50
+		job_foundry_add = 100 
+	}
+
+	potential = {
+		is_dry = yes
+	}
+
+	drop_weight = {
+		factor = 0
+	}
+}
