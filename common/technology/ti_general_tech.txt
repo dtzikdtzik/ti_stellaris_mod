@@ -20,9 +20,9 @@ tech_antimass_deflectors = {
 	area = physics
 	tier = 1
 	category = { field_manipulation }
-	cost = @tier1cost2
+	cost = @tier1cost1
 	weight = 0
-	start_tech = yes
+	start_tech = yes  ## change this if more empires than barony are added
 
 	potential = {
 		has_origin = origin_barony
@@ -33,5 +33,277 @@ tech_antimass_deflectors = {
 		damage_vs_country_type_cutholoids_mult = 0.25
 		ship_shield_mult = 0.05
 		stations_minerals_produces_mult = 0.10
+	}
+}
+
+tech_scanlink_drone_network = {
+	area = society
+	tier = 1
+	category = { archaeostudies }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		## archaeology speed and minor artifacts gain
+	}
+}
+
+tech_sarween_tools = {
+	area = engineering
+	tier = 1
+	category = { industry }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		## flat alloy cost reduction on ships?
+	}
+}
+
+tech_neural_motivators = {
+	area = society
+	tier = 1
+	category = { biology }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		### agenda speed??
+	}
+}
+
+tech_psycho_archaeology = {
+	area = society
+	tier = 1
+	category = { archaeostudies }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_ai_development_algorithm = {
+	area = engineering
+	tier = 1
+	category = { industry }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+	}
+}
+
+tech_dark_energy_tap = {
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_gravity_drive = {
+	area = physics
+	tier = 1
+	category = { particles }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_sling_relay = {
+	area = engineering
+	tier = 1
+	category = { voidcraft }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_fleet_logistics = {
+	area = society
+	tier = 1
+	category = { military_theory }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_lightwave_deflectors = {
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_duranium_armor = {
+	area = engineering
+	tier = 1
+	category = { materials }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_assault_cannon = {
+	area = engineering
+	tier = 1
+	category = { propulsion }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_bio_stims = {
+	area = society
+	tier = 1
+	category = { biology }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_hyper_metabolism = {
+	area = society
+	tier = 1
+	category = { biology }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_daxcive_animators = {
+	area = society
+	tier = 1
+	category = { biology }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_x89_bacterial_weapon = {
+	area = society
+	tier = 1
+	category = { biology }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_transit_diodes = {
+	area = engineering
+	tier = 1
+	category = { voidcraft }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_predictive_intelligence = {
+	area = physics
+	tier = 1
+	category = { computing }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_integrated_economy = {
+	area = engineering
+	tier = 1
+	category = { industry }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_graviton_laser_system = {
+	area = physics
+	tier = 1
+	category = { particles }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
+	}
+}
+
+tech_magen_defense_grid = {
+	area = society
+	tier = 1
+	category = { military_theory }
+	cost = @tier1cost1
+	weight = -1
+	start_tech = no
+
+	modifier = {
+		
 	}
 }

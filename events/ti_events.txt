@@ -1,0 +1,455 @@
+namespace = country
+
+##Unlike literally any other game file, which does LIOS, Stellaris loads /events with First In Only Serve basis, meaning in order to override a vanilla event without overriding the entire file, the filename for the event text file needs to be higher than vanilla files in UTF-8 order. This is usually achieved by attaching exclamation point(s) to the front of filename, like !!vanilla_override_event.txt
+## https://stellaris.paradoxwikis.com/Event_modding
+
+##### technology strategy
+country_event = {
+	id = ti_strategy_tech.07
+	hide_window = no
+
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+### AI dev
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_ai_development_algorithm }
+		}
+		name = ai_development_algorithm
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_ai_development_algorithm
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_ai_development_algorithm
+			progress = 100
+			}
+		}
+	}
+### plasma scoring
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_plasma_scoring }
+		}
+		name = plasma_scoring
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_plasma_scoring
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_plasma_scoring
+			progress = 100
+			}
+		}
+	}
+### self-assembly routines
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_self_assembly_routines }
+			has_country_flag = owns_a_red_tech
+		}
+		name = self_assembly_routines
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_self_assembly_routines
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_self_assembly_routines
+			progress = 100
+			}
+		}
+	}
+### antimass deflectors
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_antimass_deflectors }
+		}
+		name = antimass_deflecors
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_antimass_deflectors
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_antimass_deflectors
+			progress = 100
+			}
+		}
+	}
+## DET
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_dark_energy_tap }
+		}
+		name = dark_energy_tap
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_dark_energy_tap
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_dark_energy_tap
+			progress = 100
+			}
+		}
+	}
+### Neural motivators
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_neural_motivators }
+		}
+		name = neural_motivators
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_neural_motivators
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_neural_motivators
+			progress = 100
+			}
+		}
+	}
+### psycho-archaeology
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_psycho_archaeology }
+		}
+		name = psycho-archaeology
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_psycho_archaeology
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_psycho_archaeology
+			progress = 100
+			}
+		}
+	}
+### Sarween tools
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_sarween_tools }
+		}
+		name = sarween_tools
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_sarween_tools
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_sarween_tools
+			progress = 100
+			}
+		}
+	}
+### scanlink
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_scanlink_drone_network }
+		}
+		name = scanlink_drone_network
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_scanlink_drone_network
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_scanlink_drone_network
+			progress = 100
+			}
+		}
+	}
+# prescriptive
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_predictive_intelligence }
+		}
+		name = predictive_intelligence
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_predictive_intelligence
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_predictive_intelligence
+			progress = 100
+			}
+		}
+	}
+# transit diodes
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_transit_diodes }
+		}
+		name = transit_diodes
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_transit_diodes
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_transit_diodes
+			progress = 100
+			}
+		}
+	}
+# graviton laser system
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_graviton_laser_system }
+		}
+		name = tech_graviton_laser_system
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_graviton_laser_system
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_graviton_laser_system
+			progress = 100
+			}
+		}
+	}
+## integrated economy
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_integrated_economy }
+		}
+		name = integrated_economy
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_integrated_economy
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_integrated_economy
+			progress = 100
+			}
+		}
+	}
+## daxcive
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_daxcive_animators }
+		}
+		name = daxcive_animators
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_daxcive_animators
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_daxcive_animators
+			progress = 100
+			}
+		}
+	}
+# hypermetabolism
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_hypermetabolism }
+		}
+		name = hypermetabolism
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_hypermetabolism
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_hypermetabolism
+			progress = 100
+			}
+		}
+	}
+# bio-stims
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_bio_stims }
+		}
+		name = bio_stims
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_bio_stims
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_bio_stims
+			progress = 100
+			}
+		}
+	}
+# x-89
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_x89_bacterial_weapon }
+		}
+		name = x89_bacterial_weapon
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_x89_bacterial_weapon
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_x89_bacterial_weapon
+			progress = 100
+			}
+		}
+	}
+# gravity drive
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_gravity_drive }
+		}
+		name = gravity_drive
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_gravity_drive
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_gravity_drive
+			progress = 100
+			}
+		}
+	}
+# sling relay
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_sling_relay }
+		}
+		name = sling_relay
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_sling_relay
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_sling_relay
+			progress = 100
+			}
+		}
+	}
+# fleet log
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_fleet_logistics }
+		}
+		name = fleet_logistics
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_fleet_logistics
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_fleet_logistics
+			progress = 100
+			}
+		}
+	}
+# lightwave deflectors
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_lightwave_deflectors }
+		}
+		name = lightwave_deflectors
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_lightwave_deflectors
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_lightwave_deflectors
+			progress = 100
+			}
+		}
+	}
+# duranium
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_duranium_armor }
+		}
+		name = duranium_armor
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_duranium_armor
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_duranium_armor
+			progress = 100
+			}
+		}
+	}
+# assault cannon 
+	option = {
+		trigger = {
+			NOT = { has_technology = tech_assault_cannon }
+		}
+		name = assault_cannon
+		tooltip = {
+			add_tech_progress = {
+				tech = tech_assault_cannon
+				progress = 100
+			}
+		}
+		hidden_effect = { 
+			add_tech_progress = {
+			tech = tech_assault_cannon
+			progress = 100
+			}
+		}
+	}
+}
+

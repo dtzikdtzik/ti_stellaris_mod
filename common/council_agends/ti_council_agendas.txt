@@ -1,0 +1,21 @@
+@base_tradition_agenda_cost = 7000
+@short_agenda_cost = 3500
+
+#####################
+### STRATEGIES (Strategy Cards)
+#####################
+
+agenda_technology_strategy = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_discovery_adopt
+	}
+	potential = { has_origin = origin_barony }
+	modifier = {
+		## researcher upkeep or sth
+	}
+	finish_modifier = agenda_technology_strategy_finish
+	effect = {
+		run_country_event
+	}
+}

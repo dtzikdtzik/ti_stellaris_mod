@@ -46,7 +46,8 @@ thin_atmosphere = {
 
 # dunlain reaper mech modifier
 dunlain_reapers_deployed = {
-	#planet_defense_armies_add = 2
+	custom_tooltip = tooltip_dunlain_reapers_decision_desc
+	planet_defense_armies_add = 2
 	army_defense_morale_mult = 0.33
 }
 
