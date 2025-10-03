@@ -184,6 +184,7 @@ civic_munitions_reserves = {
 # 		army_starting_experience_add = 100 #cause they recycle combat experience ig
 # 		subspecies_integration_mult = 0.75 #does this do what I think?
 # 		#some kind of reanimation thing
+		# occupation armies
 # 		#some kind of build speed and build cost thing for conquered planets
 # 	}
 # }

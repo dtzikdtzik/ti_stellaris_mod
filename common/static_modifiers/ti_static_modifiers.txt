@@ -27,10 +27,12 @@ ao = {
 }
 
 fungus_caves = {
+	icon = "gfx/interface/icons/modifiers/ti_shroom_caves.dds"
 	country_base_food_produces_add = 10
 }
 
 cave_systems = { #arc prime, letnev tunnels
+	icon = "gfx/interface/icons/modifiers/ti_caves.dds"
 	planet_orbital_bombardment_damage = -0.75
 #	army_defense_health_mult = 0.1
 	job_miner_add = 200
@@ -46,6 +48,7 @@ thin_atmosphere = {
 
 # dunlain reaper mech modifier
 dunlain_reapers_deployed = {
+	icon = "gfx/interface/icons/modifiers/dunlain_reapers.dds"
 	custom_tooltip = tooltip_dunlain_reapers_decision_desc
 	planet_defense_armies_add = 2
 	army_defense_morale_mult = 0.33
