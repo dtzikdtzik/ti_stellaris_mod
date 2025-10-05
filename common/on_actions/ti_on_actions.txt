@@ -1,0 +1,18 @@
+on_ship_destroyed_victim = {
+	##barony gain resources on losing ships
+	events = {
+		
+	}
+}
+
+#Scope: Ship Event
+#A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		## gain 5 alloys, sarween tools
+		#assuming there is no easier way
+		
+	}
+}

@@ -33,7 +33,7 @@ tech_antimass_deflectors = {
 		damage_vs_country_type_crystal_mult = 0.25
 		damage_vs_country_type_cutholoids_mult = 0.25
 		ship_shield_mult = 0.05
-		stations_minerals_produces_mult = 0.10
+		##stations_minerals_produces_mult = 0.10
 	}
 }
 
@@ -47,6 +47,8 @@ tech_scanlink_drone_network = {
 
 	modifier = {
 		## archaeology speed and minor artifacts gain
+		country_minor_artifacts_produces_mult = 0.25
+		ship_archaeological_site_excavation_speed_mult = 0.25
 	}
 }
 
@@ -86,7 +88,8 @@ tech_psycho_archaeology = {
 	start_tech = no
 
 	modifier = {
-		
+		rare_tech_draw_chance_mult = 0.25
+		country_specimen_selling_cost_mult = 0.25
 	}
 }
 
@@ -99,7 +102,9 @@ tech_ai_development_algorithm = {
 	start_tech = no
 
 	modifier = {
-		
+		category_voidcraft_research_speed_mult = 0.3
+		category_voidcraft_draw_chance_mult = 0.3
+		shipclass_military_build_cost_mult = -0.02 ### change this to scale with upgrades
 	}
 }
 
@@ -113,8 +118,6 @@ tech_dark_energy_tap = {
 
 	modifier = {
 		ship_anomaly_generation_chance_mult = 1
-		
-		
 	}
 }
 
@@ -127,7 +130,7 @@ tech_gravity_drive = {
 	start_tech = no
 
 	modifier = {
-		
+		ship_speed_mult = 0.25
 	}
 }
 
@@ -140,7 +143,10 @@ tech_sling_relay = {
 	start_tech = no
 
 	modifier = {
-		
+		### starbases with only 1 shipyard gain +100% build speed
+		## or an edict to increase starbase shipyard cap??
+		shipclass_military_build_speed_mult = 0.25
+		catapult_spread_mult = -0.25
 	}
 }
 
@@ -153,7 +159,8 @@ tech_fleet_logistics = {
 	start_tech = no
 
 	modifier = {
-		jump_drive_cooldown = -0.5
+		jump_drive_cooldown = -0.3
+		
 	}
 }
 
@@ -180,6 +187,7 @@ tech_duranium_armor = {
 
 	modifier = {
 		ship_armor_regen_add_perc = 0.05
+		
 	}
 }
 
@@ -219,6 +227,7 @@ tech_hyper_metabolism = {
 
 	modifier = {
 		country_base_influence_produces_add = 1
+		## or edict cap?
 	}
 }
 
@@ -232,7 +241,6 @@ tech_daxcive_animators = {
 
 	modifier = {
 		country_occupation_armies_add = 4
-		
 	}
 }
 
@@ -260,7 +268,8 @@ tech_transit_diodes = {
 	start_tech = no
 
 	modifier = {
-		
+		planet_army_build_time_mult = -0.25
+		planet_defense_armies_add = 2 ## dont like
 	}
 }
 
@@ -273,7 +282,9 @@ tech_predictive_intelligence = {
 	start_tech = no
 
 	modifier = {
-		
+		country_edict_fund_mult = 0.25
+		council_agenda_cooldown_mult = -0,25
+		##country_government_civic_points_add =   #whoah 
 	}
 }
 
@@ -286,7 +297,7 @@ tech_integrated_economy = {
 	start_tech = no
 
 	modifier = {
-		
+		building_time_mult = -0.25
 	}
 }
 
@@ -299,7 +310,19 @@ tech_graviton_laser_system = {
 	start_tech = no
 
 	modifier = {
-		
+		shipsize_orbital_ring_tier_1_armor_penetration_add = 0.25
+		shipsize_orbital_ring_tier_1_shield_penetration_add = 0.25
+		shipsize_orbital_ring_tier_2_armor_penetration_add = 0.25
+		shipsize_orbital_ring_tier_2_shield_penetration_add = 0.25
+		shipsize_orbital_ring_tier_3_armor_penetration_add = 0.25
+		shipsize_orbital_ring_tier_3_shield_penetration_add = 0.25
+		shipsize_orbital_ring_tier_1_hull_damage_mult = 0.25
+		shipsize_orbital_ring_tier_2_hull_damage_mult = 0.25
+		shipsize_orbital_ring_tier_3_hull_damage_mult = 0.25
+		shipsize_orbital_ring_tier_1_weapon_range_mult = 0.25
+		shipsize_orbital_ring_tier_2_weapon_range_mult = 0.25
+		shipsize_orbital_ring_tier_3_weapon_range_mult = 0.25
+
 	}
 }
 

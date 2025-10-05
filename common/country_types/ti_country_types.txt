@@ -1,0 +1,85 @@
+mecatol = {
+#	scaled_difficulty_bonuses = 0.5	# scales to setting
+	is_space_critter = yes
+	show_in_contacts_list = yes
+	can_have_their_comms_shared = no
+	government = yes
+#	is_enclave = yes
+	observable = no
+	sub_title = "winnaran_custodians_sub"
+	sub_title_desc = "winnaran_custodians_sub_desc"
+	ai = {
+		enabled = no
+	}
+	faction = {
+		neutral = yes
+		hostile = no
+		needs_border_access = no
+		generate_borders = yes
+		needs_colony = no
+	}
+#	custom_diplomacy = yes
+#	custom_opinion = yes
+	modules = {
+		basic_technology_module = {}
+		standard_event_module = {}
+		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
+		#basic_technology_module = {}
+	}
+}
+
+#mecatol = { 
+#	has_difficulty_bonuses = yes
+#	enforces_borders = no
+#	share_communications = no
+#	show_in_contacts_list = yes
+#	uses_origins = yes
+#	observable = no
+#	government = yes
+#	blocks_piracy = yes
+#	can_use_invalid_technology = yes
+#	can_planets_be_attacked = yes
+#	has_pulse_events = no
+#	has_deficits = no
+#	sub_title = "winnaran_custodians_sub"
+#	sub_title_desc = "winnaran_custodians_sub_desc"
+#	
+#	ai = {
+#		enabled = no
+#	}
+#	
+#	faction = {
+#			hostile = yes
+#			generate_borders = yes
+#			needs_border_access = no
+#			needs_colony = yes
+#			auto_delete = yes
+#			}
+#			
+#	modules = {
+##		basic_technology_module = {}
+#		tiered_technology_module = {
+#			tier = 3
+#			rare = no
+#		}
+#		all_technology_module = {}
+#		standard_leader_module = {}
+#		exclusive_diplomacy_module = { contact_rule = on_action_only }
+#		standard_event_module = {}
+#		standard_economy_module = {}
+#	}
+#
+#	resources = {
+#		category = country_base
+#		produces = {
+#			energy = 100
+#			food = 20
+#			minerals = 20
+#			alloys = 100
+#			consumer_goods = 200
+#			volatile_motes = 5
+#			influence = 3
+#			unity = 10
+#		}
+#	}
+#}

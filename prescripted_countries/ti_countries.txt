@@ -7,7 +7,7 @@ letnev = {
 		name = "Letnev"
 		plural = "Letnev"
 		adjective = "Letnevan"
-		name_list = "MACHINE1"
+		name_list = "LETNEV"
 		trait = "trait_organic"
 		#trait = "trait_cave_dweller"
 		## used by Spacht, probably deprecated
@@ -30,7 +30,7 @@ letnev = {
 	planet_class = "pc_arctic"
 	system_name = "Arc"
 	initializer = "letnev_home_init"
-	graphical_culture = "humanoid_01"
+	graphical_culture = "nemesis_01"
 	city_graphical_culture = "humanoid_01"
 	empire_flag = {
 		icon = {

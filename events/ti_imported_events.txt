@@ -1,0 +1,138 @@
+ship_event = {
+	id = ti_events.6  #  visiting Mecatol for the first time	
+	title = ti_events.6.name
+	location = from
+	desc = {
+		text = ti_events.6.desc
+		trigger = { Not = { FromFrom = { has_country_flag = l1z1x_flag } } }
+	}
+	desc = {
+		text = ti_events.6.desc2
+		trigger = { FromFrom = { has_country_flag = l1z1x_flag } }
+	}
+	
+	
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:winnaranleader
+		planet_background = pc_city
+		graphical_culture = event_target:winnaranleader
+		city_level = 6
+		room = personality_decadent_hierarchy_room
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { has_star_flag = mecatol_system_flag }
+		NOT = { owner = { has_country_flag = visited_mecatol } }
+		NOT = { has_global_flag = mecatol_claimed }
+	}
+	
+	immediate = {
+		FromFrom = { set_country_flag = visited_mecatol }
+	#	random_galaxy_planet = {
+	#		limit = { has_planet_flag = mecatol_planet_flag }
+	#		set_surveyed = { surveyed = yes surveyor = FromFrom }
+	#	}
+		event_target:mecatolplanet = {
+			set_surveyed = { surveyed = yes surveyor = FromFrom }
+		}
+		random_country = {
+			limit = {
+				is_country_type = mecatol
+			}
+			establish_contact = { who = root.owner location = root.solar_system }
+			establish_communications_no_message = root.owner
+			set_faction_hostility = {
+				target = root.owner
+				set_hostile = yes
+				set_neutral = no
+				set_friendly = no
+			}
+		}
+	}
+	
+	option = {
+		name = "ti_events.6.a"
+		response_text = ti_events.6.a.response
+	}
+	
+	option = {
+		name = "ti_events.6.b"
+		trigger = {
+			FromFrom = { has_country_flag = winnu_flag }
+		}
+		allow = { 
+			FromFrom = { resource_stockpile_compare = { resource = influence value >= 500 } }
+		}
+		FromFrom = { add_resource = { influence = -500 } }
+		random_country = { limit = { is_country_type = mecatol }
+			every_owned_fleet = { set_owner = FromFrom } 
+		}	
+		set_global_flag = mecatol_claimed
+		event_target:mecatolsystem = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = fromfrom
+			}
+		}
+		event_target:mecatolplanet = {
+			If = {
+				limit = { has_ancrel = yes }
+				change_pc = pc_relic
+			}
+			else = {
+				change_pc = pc_city
+			}
+			set_owner = fromfrom
+			while = {
+				count = 10
+				create_pop = {
+					species = event_target:winnaranspecies
+				}	
+			}
+			add_building = building_system_capital
+		#	add_building = building_capital 
+			add_building = building_planetary_shield_generator
+			add_building = building_fortress
+										
+			clear_deposits = yes
+						
+			add_deposit = d_ruined_arcology
+			add_deposit = d_ruined_arcology
+			add_deposit = d_ruined_arcology
+			add_deposit = d_ruined_arcology
+			add_deposit = d_ruined_arcology
+			
+			add_deposit = d_ruined_arcology
+			add_deposit = d_ruined_arcology
+			add_deposit = d_bomb_crater
+			add_deposit = d_bomb_crater
+			add_deposit = d_radioactive_wasteland
+			
+			add_deposit = d_radioactive_wasteland
+			add_deposit = d_radioactive_wasteland
+			add_deposit = d_radioactive_wasteland
+			add_deposit = d_radioactive_wasteland
+
+			If = {
+				limit = { has_ancrel = yes }
+				add_district = district_city 
+			}
+			Else = {
+				add_district = district_arcology_housing
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+				add_deposit = d_ruined_arcology
+			}
+		}
+	}		
+}

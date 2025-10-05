@@ -5,12 +5,30 @@ tech_NES = { ##TODO: create the shield module
 	tier = 3
 	category = { field_manipulation }
 	prerequisites = { "tech_battleships" "tech_shields_5" }
-	weight = @tier3weight1
+	weight = -1
 	start_tech = no
 
 	potential = {  #does potential work here? otherwise use weight_modifier?
 			has_country_flag = letnev_flag
 		}	
+}
+
+tech_l4_disruptors = {
+	cost = @tier2cost1
+	area = physics
+	category = { field_manipulation }
+	tier = 2
+	weight = -1
+	start_tech = no
+
+	potential = {
+		has_origin = origin_barony
+	}
+	modifier = {
+		shipsize_transport_cloaking_strength_add = 2
+		shipsize_transport_evasion_mult = 1
+		### on smaller, unarmed vessels, L4 disruptors serve to manipulate enemy sensors and allow armies to slip by planetary and orbital defenses undetected
+	}
 }
 
 # tech_l4_disruptors = {
